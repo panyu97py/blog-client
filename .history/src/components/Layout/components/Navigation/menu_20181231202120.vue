@@ -1,0 +1,9 @@
+<template>
+  <div>
+          <p>博客主页</p>
+      <p>随笔</p>
+      <p>相册</p>
+      <p>个人主页</p>
+      <p>个人简历</p>
+  </div>
+</template>
