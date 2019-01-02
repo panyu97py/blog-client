@@ -8,7 +8,15 @@ export default new Router({
     {
       path: '/',
       name: 'Layout',
-      component: () => import('@/components/Layout')
+      redirect: '/article',
+      component: () => import('@/components/Layout'),
+      children: [
+        {
+          path: '/article',
+          name: 'article',
+          component: () => import('@/components/article')
+        }
+      ]
     }
   ]
 })

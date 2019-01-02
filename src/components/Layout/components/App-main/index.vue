@@ -1,6 +1,5 @@
 <template>
   <div id="app-main">
-    appamin
     <router-view/>
   </div>
 </template>

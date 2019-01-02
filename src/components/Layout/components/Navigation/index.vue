@@ -9,6 +9,7 @@
       <NavigationTag v-else-if="model==='tag'"/>
     </div>
   </div>
+  <!-- background-color: rgba(0,0,0,0.75); -->
 </template>
 <script>
 import NavigationMenu from './Navigation_menu'
