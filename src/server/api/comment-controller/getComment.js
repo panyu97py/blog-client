@@ -8,7 +8,7 @@ import request from '@/server/utils/request'
 export default (commentId, userId, articleId) => {
   return request({
     url: '/:comment/edit',
-    method: 'post',
+    method: 'get',
     params: {
       user_id: userId,
       comment_id: commentId,

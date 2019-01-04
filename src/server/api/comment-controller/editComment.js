@@ -8,7 +8,7 @@ export default (commentId, commitContent) => {
   return request({
     url: '/:comment/edit',
     method: 'post',
-    params: {
+    data: {
       comment_id: commentId,
       commit_content: commitContent
     }
