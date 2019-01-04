@@ -4,6 +4,9 @@ import deleteSort from './deleteSort'
 import editSort from './editSort'
 import getSort from './getSort'
 import setSort from './setSort'
+/**
+ * 分类管理模块
+ */
 export default {
   addSort,
   cancelSort,
