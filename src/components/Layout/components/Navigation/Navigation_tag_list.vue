@@ -1,18 +1,15 @@
 <template>
-  <div id="article_footer">
-    <svg-icon icon-class="tag" class="article_tag_icon"/>
+  <div>
     <articleTagList>
       <articleTag tagName="标签1"/>
     </articleTagList>
-    <div style="clear:both"/>
   </div>
 </template>
 <script>
 import articleTag from '@/components/tagList/item'
 import articleTagList from '@/components/tagList'
-
 export default {
-  name: 'article_footer',
+  name: 'ArticleTagList',
   components: {
     articleTag,
     articleTagList
