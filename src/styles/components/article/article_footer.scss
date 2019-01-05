@@ -17,4 +17,20 @@
       list-style: none;
     }
   }
+  .article_show_all{
+    cursor: pointer;
+    background: #258fb8;
+    height: 18px;
+    border-radius: 2px;
+    padding:3px  10px  3px 10px;
+    margin: 0;
+    float: right;
+    font-size: 10px;
+    color:white;
+    transition: background 1s;
+  }
+  .article_show_all:hover{
+    background: none;
+    color:  $font_color;
+  }
 }
