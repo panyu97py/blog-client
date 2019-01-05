@@ -56,18 +56,38 @@ module.exports = {
           resolve("node_modules/webpack-dev-server/client")
         ]
       },
+      // {
+      //   test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+      //   loader: "url",
+      //   exclude: [path.resolve(__dirname, "../src/images/icons")], //排除字体图标文件
+      //   query: {
+      //     limit: 10000,
+      //     name: utils.assetsPath("img/[name].[ext]")
+      //   }
+      // },
+      // {
+      //   test: /\.svg$/,
+      //   loader:
+      //     "svg-sprite?" +
+      //     JSON.stringify({
+      //       name: "[name]",
+      //       prefixize: true
+      //     })
+      // },
       {
         test: /\.svg$/,
-        loader:
-          "svg-sprite?" +
-          JSON.stringify({
-            name: "[name]",
-            prefixize: true
-          })
+        loader: "svg-sprite-loader",
+        include: [path.resolve(__dirname, '../src/icons/svg')],
+        options: {
+          //symbolId: 'icon-[name]' //这个没有生效，生效的是默认的name
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: "url-loader",
+        exclude: [
+          path.resolve(__dirname, '../src/icons/svg'),
+        ],
         options: {
           limit: 10000,
           name: utils.assetsPath("img/[name].[hash:7].[ext]")

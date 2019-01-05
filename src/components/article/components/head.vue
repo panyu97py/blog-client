@@ -3,7 +3,8 @@
     <!-- <div class="article_head"> -->
     <p class="article_title">{{title}}</p>
     <p class="article_time">
-      <dateIcon/>
+    <svg-icon icon-class="date"></svg-icon>
+
       {{time}}
     </p>
     <div style="clear:both"/>
@@ -11,7 +12,6 @@
   </div>
 </template>
 <script>
-import dateIcon from '@/assets/icon/date'
 
 export default {
   name: 'article_head',
@@ -26,7 +26,6 @@ export default {
     }
   },
   components: {
-    dateIcon
   }
 }
 </script>

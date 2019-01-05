@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <router-view/>
+    <!-- <svg-icon icon-class="date"></svg-icon> -->
   </div>
 </template>
 
