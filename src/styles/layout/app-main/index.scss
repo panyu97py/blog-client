@@ -3,7 +3,7 @@
     float: left;
     background: #3f3f3f;
     height: 100%;
-    width: 80%;
+    width:calc(100% - 300px);
   }
 }
 @media (max-width: 768px) {

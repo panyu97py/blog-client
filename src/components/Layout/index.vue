@@ -18,8 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#Layout {
-  width: 100%;
-  height: 100%;
-}
+// #Layout {
+//   width: 100%;
+//   height: 100%;
+// }
 </style>
