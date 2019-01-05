@@ -12,7 +12,15 @@
   "env": {
     "test": {
       "presets": ["env", "stage-2"],
-      "plugins": ["transform-vue-jsx", "transform-es2015-modules-commonjs", "dynamic-import-node"]
+      "plugins": ["transform-vue-jsx", "transform-es2015-modules-commonjs", "dynamic-import-node",[
+        "prismjs",
+        {
+        "languages": ["javascript", "css", "markup"],//要包含在捆绑中的语言数组。
+        "plugins": ["line-numbers","copy-to-clipboard","highlight-keywords","jsonp-highlight","show-language","previewers"],//要包含在包中的插件数组。
+        "theme": "tomorrow",//要包含在包中的主题的名称
+        "css": true//布尔值，指示是否.css在结果中包含文件。默认为false。如果true，import将为.css文件添加s 。必须是true为了theme工作。
+        }
+        ]]
     }
   }
 }
