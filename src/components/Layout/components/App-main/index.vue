@@ -3,20 +3,3 @@
     <router-view/>
   </div>
 </template>
-<style lang="scss">
-  @media (min-width: 768px) {
-    #app-main {
-      float: left;
-      background: #3f3f3f;
-      height: 100%;
-      width: 80%;
-    }
-  }
-  @media (max-width: 768px) {
-    #app-main {
-      background: yellowgreen;
-      height: 80px;
-
-    }
-  }
-</style>

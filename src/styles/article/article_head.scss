@@ -1,0 +1,41 @@
+  // 文章头部
+  #article_head {
+    border-left: rgba(63, 63, 63, 0) 5px solid;
+    padding: 15px 25px 0px 25px;
+    .article_title {
+      color: $font_color;
+      font-weight: initial;
+      line-height: 35px;
+      margin-bottom: 20px;
+      text-align: left;
+      font-size: 26px;
+      width: 50%;
+      float: left;
+      margin: 0;
+    }
+    .article_time {
+      color: $font_color;
+      width: 120px;
+      float: right;
+  
+      margin-right: 10px;
+      .article_time_icon {
+        font-size: 30px;
+        line-height: 35px;
+        float: left;
+      }
+      .article_time_text {
+        font: {
+          size:15px;
+          weight:initial;
+        }
+        line-height: 35px;
+        float: left;
+         margin: 0 5px;
+  
+      }
+    }
+    .article_title:hover {
+      color: white;
+    }
+  }

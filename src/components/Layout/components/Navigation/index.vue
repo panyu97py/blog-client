@@ -39,37 +39,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@media (min-width: 768px) {
-  #Navigation {
-    float: left;
-    width: 20%;
-    height: 100%;
-    background: yellowgreen;
-    text-align: center;
-    position: relative;
-    .Navigation_content {
-      height: 65%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-    .headImg {
-      width: 40%;
-      border-radius: 50%;
-      border: white 1px solid;
-    }
-  }
-}
-@media (max-width: 768px) {
-  #Navigation {
-    background: white;
-    height: 50px;
-  }
-}
-</style>

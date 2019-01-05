@@ -1,0 +1,14 @@
+#article {
+  background: #3f3f3f;
+  margin: 30px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  .article_body {
+    height: 80px;
+    width: 100%;
+  }
+@import './article_hr.scss';
+@import './article_head.scss';
+@import './article_footer.scss';
+}
