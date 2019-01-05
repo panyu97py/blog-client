@@ -1,0 +1,39 @@
+.article_tag{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 10px;
+  color: #fff;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 5px 0px 10px;
+  position: relative;
+  border-radius: 0 5px 5px 0;
+  margin: 5px 9px 5px 8px;
+  background: #e23794;
+}
+.article_tag::before{
+  content: " ";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 0;
+  left: -18px;
+  border: 9px solid transparent;
+  border-right-color: #e23794;
+}
+.article_tag:after{
+  content: " ";
+  width: 4px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.3);
+  position: absolute;
+  top: 7px;
+  left: 2px;
+}
+.article_tag:hover{
+  opacity: 0.8;
+}

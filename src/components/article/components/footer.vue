@@ -3,11 +3,10 @@
     <svg-icon icon-class="tag" class="article_tag_icon"/>
     <ul class="article_tag_list">
       <li class="article_tag_list_item">
-        <articleTag/>
+        <articleTag tagName="标签1"/>
       </li>
     </ul>
     <div style="clear:both"/>
-    <!-- <div><a href="" class="article_tag">标签</a></div> -->
   </div>
 </template>
 <script>
