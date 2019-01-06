@@ -5,16 +5,22 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    // {
+    //   path: '/',
+    //   redirect: '/app'
+    // },
     {
       path: '/',
       name: 'Layout',
-      redirect: '/article',
+      redirect: '/articleList',
       component: () => import('@/components/Layout'),
       children: [
         {
-          path: '/article',
-          name: 'article',
-          component: () => import('@/components/article')
+          path: '/articleList',
+          name: 'articleList',
+          component: () => import('@/view/app/article')
+          // component: () => import('@/view/app/article/test')
+
         }
       ]
     }

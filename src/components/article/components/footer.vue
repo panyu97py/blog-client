@@ -15,7 +15,6 @@
 <script>
 import articleTag from '@/components/tagList/item'
 import articleTagList from '@/components/tagList'
-
 export default {
   name: 'article_footer',
   components: {

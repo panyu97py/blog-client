@@ -2,7 +2,7 @@
   <div id="article">
     <articleHead :title="title" :time="time"/>
     <articleHr/>
-    <div class="article_body"></div>
+    <div class="article_body" ref="article_body" v-html="content"></div>
     <articleFooter/>
   </div>
 </template>
@@ -10,18 +10,31 @@
 import articleHead from './components/head'
 import articleFooter from './components/footer'
 import articleHr from './components/hr'
+import Prism from 'Prismjs'
 export default {
   name: 'Article',
-  data () {
-    return {
-      title: '标题',
-      time: '2019-01-02'
+  props: {
+    title: {
+      type: String,
+      required: true
+    },
+    time: {
+      type: String,
+      required: true
+    },
+    content: {
+      type: String,
+      required: true
     }
   },
   components: {
     articleHead,
     articleFooter,
     articleHr
+  },
+  mounted () {
+    Prism.highlightAll()
+    // Prism.highlightElement(this.$refs.article_body)
   }
 }
 </script>
