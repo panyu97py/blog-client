@@ -7,9 +7,11 @@
     margin: auto;
     background: white;
     border-radius: 50%;
-    img {
-      margin-top: 10%;
-      height: 80%;
+    .switch_icon_svg{
+      color: black;
+      // line-height: 30px;
+      padding :5px 0 ;
+      font-size: 20px;
     }
   }
   .selectOption::before {
@@ -32,7 +34,7 @@
     background: black;
     color: white;
     margin: auto;
-    top: 3vw;
+    top: 4vw;
     left: 0;
     right: 0;
     p {

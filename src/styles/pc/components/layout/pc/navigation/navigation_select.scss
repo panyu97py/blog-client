@@ -1,0 +1,50 @@
+#Navigation_select {
+  position: relative;
+  width: 100%;
+  .switch_icon {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    background: white;
+    border-radius: 50%;
+    .switch_icon_svg{
+      color: black;
+      // line-height: 30px;
+      padding :5px 0 ;
+      font-size: 20px;
+    }
+  }
+  .selectOption::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: -1;
+    margin: auto;
+    left: 0;
+    right: 0;
+    transform: rotate(45deg);
+    background: black;
+  }
+  .selectOption {
+    position: absolute;
+    width: 30%;
+    z-index: 1;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    margin: auto;
+    top: 4vw;
+    left: 0;
+    right: 0;
+    p {
+      margin: 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    p:hover {
+      background: greenyellow;
+      border-radius: 5px;
+    }
+  }
+}
