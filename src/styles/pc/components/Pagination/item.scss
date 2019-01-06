@@ -1,0 +1,23 @@
+.Pagination_Item{
+  background: #4d4d4d;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  // float: left;
+  display: inline-block;
+  margin: 0 3px 0 0;
+}
+.Pagination_Item:hover{
+  cursor: pointer;
+  background: #797878;
+}
+.current:hover{
+  background: #4094c7;
+}
+.current{
+  background: #4094c7;
+}

@@ -1,13 +1,16 @@
 <template>
   <div id="articleList">
     <Article title="标题" time="2018-01-06" :content="content"/>
+    <!-- <Article title="标题" time="2018-01-06" :content="content"/>
     <Article title="标题" time="2018-01-06" :content="content"/>
-    <Article title="标题" time="2018-01-06" :content="content"/>
-    <Article title="标题" time="2018-01-06" :content="content"/>
+    <Article title="标题" time="2018-01-06" :content="content"/> -->
+    <Pagination totalPage="10" currentPage="3"/>
   </div>
 </template>
 <script>
 import Article from '@/components/article'
+import Pagination from '@/components/Pagination'
+
 export default {
   name: 'articleList',
   data () {
@@ -29,7 +32,8 @@ export default {
     }
   },
   components: {
-    Article
+    Article,
+    Pagination
   }
 }
 </script>
