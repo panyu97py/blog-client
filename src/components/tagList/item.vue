@@ -1,6 +1,6 @@
 <template>
   <li class="tag_list_item" :class="theme">
-   <a href class="tag">{{tagName}}</a>
+     <span class="tag">{{tagName}}</span>
   </li>
 </template>
 <script>

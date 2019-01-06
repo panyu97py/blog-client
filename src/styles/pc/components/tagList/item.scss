@@ -26,6 +26,7 @@
   @include theme(#4cae4c);
 }
 .tag_list_item {
+  cursor: pointer;
   position: relative;
   float: left;
   list-style: none;
