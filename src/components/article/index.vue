@@ -3,6 +3,7 @@
     <articleHead :title="title" :time="time"/>
     <articleHr/>
     <div class="article_body" ref="article_body" v-html="content"></div>
+    <articleHr/>
     <articleFooter/>
   </div>
 </template>
