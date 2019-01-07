@@ -25,7 +25,7 @@
   }
 
   .Navigation_content {
-    height: 65%;
+    height: 76%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -39,6 +39,57 @@
     width: 40%;
     border-radius: 50%;
     border: white 1px solid;
+  }
+  .Navigation_icon_list{
+    position: relative;
+    a{
+      cursor: pointer;
+      color:white;
+      display:inline-block;
+      width: 30px;
+      font-size: 20px;
+      line-height: 30px;
+      height: 30px;
+      margin: 0  5px;
+      text-decoration: none;
+      background: $background;
+      border-radius: 50%;
+    }
+    a:link {
+      color:white;
+      text-decoration: none;
+     }
+     a:visited {
+      color:white;
+      text-decoration: none;
+     }
+     a:hover {
+      color:white;
+      text-decoration: underline;
+     }
+    //  .Navigation_github_icon:hover:after{
+    //    content:'Github';
+    //    position: absolute;
+    //    top:-40px;
+    //    width: 60px;
+    //    height: 30px;
+    //    background: #258fb8;
+    //    font-size: 15px;
+    //    margin-left: -45px;
+    //    border-radius: 5px;
+    //  }
+    //  .Navigation_github_icon:hover:before{
+    //   content: "";
+    //   width: 30px;
+    //   height: 30px;
+    //   position: absolute;
+    //   margin: auto;
+    //   left: 0;
+    //   right: 0;
+    //   transform: rotate(45deg);
+    //   background: #258fb8;
+    //  }
+
   }
   @import "./navigation_select.scss";
   @import "./navigation_menu.scss";
