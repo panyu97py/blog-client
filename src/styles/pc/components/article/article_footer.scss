@@ -1,4 +1,9 @@
 #article_footer {
+    //文字不可被选中
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   .article_tag_icon {
     color: $font_color;
     font-size: 20px;
