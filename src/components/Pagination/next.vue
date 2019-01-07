@@ -1,5 +1,5 @@
 <template>
-<p @click="$emit('click')" class="Pagination_next">{{next}}</p>
+<p @click="$emit('click')" class="Pagination_next Pagination_next_not_allowed">{{next}}</p>
 </template>
 <script>
 export default {

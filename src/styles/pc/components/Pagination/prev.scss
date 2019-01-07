@@ -1,3 +1,8 @@
 .Pagination_prev{
+  cursor: pointer;
   display: inline-block;
+}
+.Pagination_prev_not_allowed{
+  cursor: not-allowed;
+  // pointer-events:none
 }

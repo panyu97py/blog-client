@@ -1,3 +1,8 @@
 .Pagination_next{
+  cursor: pointer;
   display: inline-block;
+}
+.Pagination_next_not_allowed{
+  cursor: not-allowed;
+  // pointer-events:none;
 }

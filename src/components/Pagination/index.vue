@@ -1,16 +1,36 @@
 <template>
 <div id="Pagination">
-  <div v-if="currentPage>(pagerCount-2)">
+  <!-- 总页码大于需要显示的页码时 -->
+  <template v-if="totalPage>pagerCount">
     <prev @click="currentPage-=1"/>
-    <PaginationItem @click="currentPage=page + x" :page="page + x" :currentPage='currentPage' v-for="page in pagerCount-2" :key="page" />
+    <template>
+      <template v-if="currentPage>(pagerCount-2)">
+      <PaginationItem @click="currentPage=1" :page="1" :currentPage='currentPage'/>
+      <PaginationItem  page="..." :currentPage='currentPage'/>
+      </template>
+      <template v-if="currentPage>(pagerCount-2)&&currentPage+(pagerCount-3)/2+1<totalPage">
+        <PaginationItem @click="currentPage=page + x" :page="page + x" :currentPage='currentPage' v-for="page in pagerCount-2" :key="page" />
+      </template>
+      <template v-else-if="currentPage<=(pagerCount-2)&&currentPage+(pagerCount-3)/2+1<totalPage">
+        <PaginationItem  @click="currentPage=page" :page="page" :currentPage='currentPage' v-for="page in pagerCount -1" :key="page"/>
+      </template>
+      <template v-else-if="currentPage>(pagerCount-2)&&currentPage+(pagerCount-3)/2+1>=totalPage">
+        <PaginationItem  @click="currentPage=page+totalPage-pagerCount+1" :page="page+totalPage-pagerCount+1" :currentPage='currentPage' v-for="page in pagerCount -1" :key="page"/>
+      </template>
+      <template v-if="currentPage+(pagerCount-3)/2+1<totalPage">
+        <PaginationItem  page="..." :currentPage='currentPage'/>
+        <PaginationItem @click="currentPage=totalPage" :page="totalPage" :currentPage='currentPage' />
+      </template>
+    </template>
     <next  @click="currentPage+=1"/>
-  </div>
-  <div v-else>
+  </template>
+  <!-- 总页码小于需要显示的页码时 -->
+  <template v-else>
     <prev @click="currentPage-=1"/>
     <PaginationItem  @click="currentPage=page" :page="page" :currentPage='currentPage' v-for="page in totalPage" :key="page"/>
     <next  @click="currentPage+=1"/>
     <div style="clear:both"/>
-  </div>
+  </template>
 </div>
 </template>
 <script>
@@ -26,8 +46,9 @@ export default {
   },
   data () {
     return {
-      currentPage: 1,
-      pagerCount: 9
+      currentPage: 10,
+      pagerCount: 9,
+      totalPage: 100
     }
   },
   computed: {
@@ -36,10 +57,10 @@ export default {
     }
   },
   props: {
-    totalPage: {
-      type: Number,
-      required: true
-    }
+    // totalPage: {
+    //   type: Number,
+    //   required: true
+    // }
     // currentPage: {
     //   type: String,
     //   required: true
