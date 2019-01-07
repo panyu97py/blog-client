@@ -6,6 +6,11 @@
 </template>
 
 <script>
+/**
+ * svg 图标组件
+ * iconClass="图标名称"
+ * className="风格名称"
+ */
 export default {
   name: 'svg-icon',
   props: {

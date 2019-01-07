@@ -38,6 +38,12 @@
 import prev from './components/prev'
 import next from './components/next'
 import PaginationItem from './components/item'
+/**
+ * 分页组件
+ * v-model="当前页码/需要显示的页码"
+ * :pagerCount="需要显示的页码数量"
+ * :totalPage="总页数"
+ */
 export default {
   name: 'Pagination',
   components: {

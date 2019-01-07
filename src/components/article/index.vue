@@ -12,6 +12,12 @@ import articleHead from './components/head'
 import articleFooter from './components/footer'
 import articleHr from './components/hr'
 import Prism from 'Prismjs'
+/**
+ * 博文组件
+ * title="标题"
+ * time="日期"
+ * content="内容"
+ */
 export default {
   name: 'Article',
   props: {
