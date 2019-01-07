@@ -1,5 +1,5 @@
 <template>
-  <p class="Pagination_Item" :class="currentPage===page?'current':''">{{page}}</p>
+  <p class="Pagination_Item" :class="currentPage===page?'current':''" @click="$emit('click')">{{page}}</p>
 </template>
 <script>
 export default {

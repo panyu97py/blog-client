@@ -1,5 +1,5 @@
 <template>
-<p @click="$emit('click')">{{prev}}</p>
+<p @click="$emit('click')" class="Pagination_prev">{{prev}}</p>
 </template>
 <script>
 export default {
