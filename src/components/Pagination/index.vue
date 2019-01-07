@@ -1,6 +1,6 @@
 <template>
 <div id="Pagination">
-  <prev @click="currentPage-=1" :status="currentPage<=1"/>
+  <prev @click="prev" :status="currentPage<=1"/>
   <!-- 总页码大于需要显示的页码时 -->
   <template v-if="totalPage>pagerCount">
     <!-- 分页前半部分 -->
@@ -28,7 +28,7 @@
   <template v-else>
     <PaginationItem  @click="currentPage=page" :page="page" :currentPage='currentPage' v-for="page in totalPage" :key="page"/>
   </template>
-  <next  @click="currentPage+=1" :status="currentPage>=totalPage"/>
+  <next  @click="next" :status="currentPage>=totalPage"/>
 </div>
 </template>
 <script>
@@ -60,6 +60,15 @@ export default {
         this.$emit('input', currentPage)
       }
     }
+  },
+  methods: {
+    prev () {
+      this.currentPage = this.currentPage > 1 ? this.currentPage - 1 : this.currentPage
+    },
+    next () {
+      this.currentPage = this.currentPage < this.totalPage ? this.currentPage + 1 : this.currentPage
+    }
+
   },
   props: {
     totalPage: {
