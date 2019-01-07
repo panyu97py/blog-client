@@ -18,7 +18,7 @@ export default new Router({
         {
           path: '/articleList',
           name: 'articleList',
-          component: () => import('@/view/app/article')
+          component: () => import('@/view/app/articleList')
           // component: () => import('@/view/app/article/test')
 
         }
