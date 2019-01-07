@@ -6,11 +6,11 @@ export default {
   name: 'PaginationItem',
   props: {
     page: {
-      type: String,
+      type: Number,
       required: true
     },
     currentPage: {
-      type: String,
+      type: Number,
       required: true
     }
   }
