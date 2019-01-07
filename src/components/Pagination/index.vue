@@ -6,7 +6,7 @@
     <!-- 分页前半部分 -->
       <template v-if="currentPage>(pagerCount-2)">
       <PaginationItem @click="currentPage=1" :page="1" :currentPage='currentPage'/>
-      <PaginationItem  page="..." :currentPage='currentPage'/>
+      <PaginationItem  :page="0" :currentPage='currentPage'/>
       </template>
       <!-- 分页前中间部分 -->
       <template v-if="currentPage>(pagerCount-2)&&currentPage+(pagerCount-3)/2+1<totalPage">
@@ -20,7 +20,7 @@
       </template>
       <!-- 分页后半部分 -->
       <template v-if="currentPage+(pagerCount-3)/2+1<totalPage">
-        <PaginationItem  page="..." :currentPage='currentPage'/>
+        <PaginationItem  :page="0" :currentPage='currentPage'/>
         <PaginationItem @click="currentPage=totalPage" :page="totalPage" :currentPage='currentPage' />
       </template>
   </template>

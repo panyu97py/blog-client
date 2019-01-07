@@ -1,8 +1,13 @@
-.Pagination_prev{
+.Pagination_prev {
+  margin: 0 10px;
   cursor: pointer;
+  color: #999;
   display: inline-block;
 }
-.Pagination_prev_not_allowed{
+.Pagination_prev_not_allowed {
   cursor: not-allowed;
   // pointer-events:none
+}
+.Pagination_prev:hover {
+  color: white;
 }

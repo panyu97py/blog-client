@@ -1,8 +1,13 @@
 .Pagination_next{
+  margin: 0 10px;
+  color:#999;
   cursor: pointer;
   display: inline-block;
 }
 .Pagination_next_not_allowed{
   cursor: not-allowed;
   // pointer-events:none;
+}
+.Pagination_next:hover{
+  color:white;
 }
