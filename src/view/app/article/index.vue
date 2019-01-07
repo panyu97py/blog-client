@@ -15,7 +15,7 @@ export default {
   name: 'articleList',
   data () {
     return {
-      currentPage: 10,
+      currentPage: 1,
       content: `<pre class="language-javascript">
     <code>import Article from '@/components/article'
       export default {
