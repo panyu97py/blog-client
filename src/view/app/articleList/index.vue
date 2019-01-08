@@ -1,14 +1,14 @@
 <template>
   <div id="articleList">
     <Article title="标题" time="2018-01-06" :content="content"/>
-    <!-- <Article title="标题" time="2018-01-06" :content="content"/>
     <Article title="标题" time="2018-01-06" :content="content"/>
-    <Article title="标题" time="2018-01-06" :content="content"/> -->
+    <Article title="标题" time="2018-01-06" :content="content"/>
+    <Article title="标题" time="2018-01-06" :content="content"/>
     <Pagination v-model="currentPage" :totalPage="10"/>
   </div>
 </template>
 <script>
-import Article from '@/components/article'
+import Article from '@/components/article/no-filter'
 import Pagination from '@/components/Pagination'
 
 export default {

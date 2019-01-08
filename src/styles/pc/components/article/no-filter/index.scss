@@ -1,0 +1,16 @@
+#article {
+  background: $background;
+  margin: 30px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  padding: 15px 30px;
+  .article_body {
+    // height: 200px; // 暂时的
+    // padding: 0 30px;
+    overflow: hidden;
+  }
+@import './article_hr.scss';
+@import './article_head.scss';
+@import './article_footer.scss';
+}

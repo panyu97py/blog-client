@@ -39,6 +39,8 @@
     width: 40%;
     border-radius: 50%;
     border: white 1px solid;
+    -webkit-box-shadow: 0 0 0 2px rgba(255,255,255,.5), 0 2px 20px 3px rgba(0,0,0,.25); 
+     box-shadow: 0 0 0 2px rgba(255,255,255,.5), 0 2px 20px 3px rgba(0,0,0,.25); 
   }
   .Navigation_icon_list{
     position: relative;
@@ -47,7 +49,6 @@
       color:white;
       display:inline-block;
       width: 30px;
-      font-size: 20px;
       line-height: 30px;
       height: 30px;
       margin: 0  5px;
@@ -58,38 +59,24 @@
     a:link {
       color:white;
       text-decoration: none;
+      background: $background;
      }
      a:visited {
       color:white;
       text-decoration: none;
+      background: $background;
      }
      a:hover {
       color:white;
       text-decoration: underline;
+      background: $background;
      }
-    //  .Navigation_github_icon:hover:after{
-    //    content:'Github';
-    //    position: absolute;
-    //    top:-40px;
-    //    width: 60px;
-    //    height: 30px;
-    //    background: #258fb8;
-    //    font-size: 15px;
-    //    margin-left: -45px;
-    //    border-radius: 5px;
-    //  }
-    //  .Navigation_github_icon:hover:before{
-    //   content: "";
-    //   width: 30px;
-    //   height: 30px;
-    //   position: absolute;
-    //   margin: auto;
-    //   left: 0;
-    //   right: 0;
-    //   transform: rotate(45deg);
-    //   background: #258fb8;
-    //  }
-
+     .Navigation_email_icon{
+      font-size: 16px;
+     }
+     .Navigation_github_icon{
+      font-size: 20px;
+     }
   }
   @import "./navigation_select.scss";
   @import "./navigation_menu.scss";
