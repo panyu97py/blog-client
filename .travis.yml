@@ -14,5 +14,7 @@ script:
 - npm install npm -g
 - npm -v
 - npm run dev
+- ll
+- npm run build
 # after_success:
 # - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
