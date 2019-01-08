@@ -1,0 +1,59 @@
+.Navigation_icon_list{
+  position: relative;
+  a{
+    cursor: pointer;
+    color:white;
+    display:inline-block;
+    width: 30px;
+    line-height: 30px;
+    height: 30px;
+    margin: 0  5px;
+    text-decoration: none;
+    background: $background;
+    border-radius: 50%;
+  }
+  a:link {
+    color:white;
+    text-decoration: none;
+    background: $background;
+   }
+   a:visited {
+    color:white;
+    text-decoration: none;
+    background: $background;
+   }
+   a:hover {
+    color:white;
+    text-decoration: underline;
+    background: $background;
+   }
+   .Navigation_github_icon{
+    font-size: 20px;
+   }
+   .Navigation_github_icon:hover::before{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -40px;
+    content:'Github';
+    width: 40px;
+    display: block;
+    font-size: 10px;
+    line-height: 30px;
+    padding: 0px 15px;
+    background: $font_color;
+    border-radius: 5px;
+  }
+  .Navigation_github_icon:hover:after{
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    width: 0;
+    margin: auto;
+    content: "";
+    border: 8px transparent solid;
+    border-top:8px  $font_color solid;
+  }
+}

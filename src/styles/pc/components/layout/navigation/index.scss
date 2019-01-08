@@ -42,42 +42,6 @@
     -webkit-box-shadow: 0 0 0 2px rgba(255,255,255,.5), 0 2px 20px 3px rgba(0,0,0,.25); 
      box-shadow: 0 0 0 2px rgba(255,255,255,.5), 0 2px 20px 3px rgba(0,0,0,.25); 
   }
-  .Navigation_icon_list{
-    position: relative;
-    a{
-      cursor: pointer;
-      color:white;
-      display:inline-block;
-      width: 30px;
-      line-height: 30px;
-      height: 30px;
-      margin: 0  5px;
-      text-decoration: none;
-      background: $background;
-      border-radius: 50%;
-    }
-    a:link {
-      color:white;
-      text-decoration: none;
-      background: $background;
-     }
-     a:visited {
-      color:white;
-      text-decoration: none;
-      background: $background;
-     }
-     a:hover {
-      color:white;
-      text-decoration: underline;
-      background: $background;
-     }
-     .Navigation_email_icon{
-      font-size: 16px;
-     }
-     .Navigation_github_icon{
-      font-size: 20px;
-     }
-  }
   @import "./navigation_select.scss";
   @import "./navigation_menu.scss";
   @import "./navigation_tag.scss";
