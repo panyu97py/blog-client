@@ -12,9 +12,7 @@ script:
 - npm install --registry=https://registry.npm.taobao.org
 - npm -v
 - npm install npm -g
-- npm -v
-- npm run dev
-- ll
+- npm install --save Prismjs
 - npm run build
 # after_success:
 # - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
