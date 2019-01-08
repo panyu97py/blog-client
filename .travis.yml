@@ -13,6 +13,6 @@ script:
 - npm -v
 - npm install npm -g
 - npm -v
-- npm run build
+- npm run dev
 # after_success:
 # - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
