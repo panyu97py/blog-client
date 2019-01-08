@@ -1,5 +1,5 @@
 language: node_js
-node_js: stable
+node_js: node
 branches:
   only:
   - master
@@ -9,7 +9,7 @@ branches:
 install:
 - npm install --registry=https://registry.npm.taobao.org
 script:
-- npm install npm -g
+# - npm install npm -g
 - npm run build
 # after_success:
 # - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
