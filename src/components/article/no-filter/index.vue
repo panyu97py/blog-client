@@ -11,7 +11,7 @@
 import articleHead from './components/head'
 import articleFooter from './components/footer'
 import articleHr from './components/hr'
-import Prism from 'Prismjs'
+import Prism from 'prismjs'
 /**
  * 博文组件
  * title="标题"
