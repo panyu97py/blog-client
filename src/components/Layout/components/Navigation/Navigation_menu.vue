@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       menuList: [
-        { label: '主页', path: 'articleList' },
+        { label: '主页', path: 'overview' },
         { label: 'test', path: '' },
         { label: 'test', path: '' },
         { label: 'test', path: '' },

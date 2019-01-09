@@ -1,6 +1,6 @@
 <template>
   <li class="tag_list_item" :class="theme">
-     <span class="tag">{{tagName}}</span>
+     <span class="tag" @click="$emit('click')">{{tagName}}</span>
   </li>
 </template>
 <script>

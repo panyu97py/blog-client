@@ -1,0 +1,52 @@
+#article_sketch{
+  // padding: 20px;
+  margin: 30px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  padding: 15px 30px;
+  .article_sketch_title {
+    cursor: pointer;
+    color: $font_color;
+    font-weight: initial;
+    line-height: 35px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 20px;
+    width: 50%;
+    float: left;
+    margin: 0;
+  }
+  .article_sketch_time {
+    color: $font_color;
+    width: 120px;
+    float: right;
+
+    margin-right: 10px;
+    .article_sketch_time_icon {
+      font-size: 25px;
+      padding: 5px 0;
+      float: left;
+    }
+    .article_sketch_time_text {
+      font: {
+        size:15px;
+        weight:initial;
+      }
+      line-height: 35px;
+      float: left;
+       margin: 0 5px;
+
+    }
+  }
+  .article_sketch_title:hover {
+    color: white;
+  }
+  .article_sketch_tag_icon{
+    color: $font_color;
+    font-size: 20px;
+    line-height: 18px;
+    float: left;
+    margin: 5px;
+  }
+}

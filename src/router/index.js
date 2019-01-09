@@ -12,18 +12,23 @@ export default new Router({
     {
       path: '/app',
       name: 'app',
-      redirect: '/app/articleList',
+      redirect: '/app/overview',
       component: () => import('@/components/Layout'),
       children: [
         {
-          path: 'articleList',
-          name: 'articleList',
-          component: () => import('@/view/app/articleList')
+          path: 'overview',
+          name: 'overview',
+          component: () => import('@/view/app/overview')
         },
         {
           path: 'articleDetails',
           name: 'articleDetails',
           component: () => import('@/view/app/articleDetails')
+        },
+        {
+          path: 'articleSketch',
+          name: 'articleSketch',
+          component: () => import('@/view/app/articleSketch')
         }
       ]
     }

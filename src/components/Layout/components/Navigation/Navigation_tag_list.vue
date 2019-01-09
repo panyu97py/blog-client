@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="Navigation_tag_list">
     <articleTagList>
-      <articleTag tagName="标签1"/>
+      <articleTag tagName="标签1" @click="$router.push({name:'articleSketch'})"/>
     </articleTagList>
   </div>
 </template>
