@@ -8,7 +8,7 @@
       <articleTag tagName="标签1"/>
       <articleTag tagName="标签1"/>
     </articleTagList>
-    <p class="article_overview_show_all">展开全文 > ></p>
+    <p class="article_overview_show_all" @click="$emit('ToDetail')">展开全文 > ></p>
     <div style="clear:both"/>
   </div>
 </template>

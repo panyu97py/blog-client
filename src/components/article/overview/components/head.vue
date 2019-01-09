@@ -1,6 +1,6 @@
 <template>
   <div id="article_overview_head">
-    <p class="article_overview_title">{{title}}</p>
+    <p class="article_overview_title"  @click="$emit('ToDetail')">{{title}}</p>
     <div class="article_overview_time">
       <svg-icon icon-class="date" class="article_overview_time_icon"/>
       <p class="article_overview_time_text">{{time}}</p>

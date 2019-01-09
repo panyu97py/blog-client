@@ -1,10 +1,10 @@
 <template>
   <div id="article_overview">
-    <articleHead :title="title" :time="time"/>
+    <articleHead :title="title" :time="time" @ToDetail="$router.push({name:'articleDetails'})"/>
     <articleHr/>
     <div class="article_overview_body" ref="article_overview_body" v-html="content"></div>
     <articleHr/>
-    <articleFooter/>
+    <articleFooter  @ToDetail="$router.push({name:'articleDetails'})"/>
   </div>
 </template>
 <script>

@@ -3,9 +3,5 @@
   @import './next.scss';
   @import './prev.scss';
   text-align: center;
-  //文字不可被选中
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  padding: 0 0 30px 0;
 }
