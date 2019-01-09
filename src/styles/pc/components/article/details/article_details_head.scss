@@ -1,0 +1,44 @@
+  // 文章头部
+  #article_details_head {
+    border-left: rgba(63, 63, 63, 0) 5px solid;
+    .article_details_title {
+      color: $font_color;
+      font-weight: initial;
+      line-height: 35px;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 26px;
+      width: 100%;
+      margin: 0;
+    }
+    .article_details_time {
+      color: $font_color;
+      width: 120px;
+      float: right;
+      .article_details_time_icon {
+        font-size: 30px;
+        line-height: 35px;
+        float: left;
+      }
+      .article_details_time_text {
+        font: {
+          size:15px;
+          weight:initial;
+        }
+        line-height: 35px;
+        float: left;
+         margin: 0 5px;
+  
+      }
+    }
+    .article_details_tag_icon {
+      color: $font_color;
+      font-size: 20px;
+      line-height: 18px;
+      float: left;
+      margin: 5px;
+    }
+    .article_details_title:hover {
+      color: white;
+    }
+  }

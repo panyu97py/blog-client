@@ -1,7 +1,7 @@
   // 文章头部
-  #article_head {
+  #article_overview_head {
     border-left: rgba(63, 63, 63, 0) 5px solid;
-    .article_title {
+    .article_overview_title {
       color: $font_color;
       font-weight: initial;
       line-height: 35px;
@@ -12,18 +12,18 @@
       float: left;
       margin: 0;
     }
-    .article_time {
+    .article_overview_time {
       color: $font_color;
       width: 120px;
       float: right;
   
       margin-right: 10px;
-      .article_time_icon {
+      .article_overview_time_icon {
         font-size: 30px;
         line-height: 35px;
         float: left;
       }
-      .article_time_text {
+      .article_overview_time_text {
         font: {
           size:15px;
           weight:initial;
@@ -34,7 +34,7 @@
   
       }
     }
-    .article_title:hover {
+    .article_overview_title:hover {
       color: white;
     }
   }

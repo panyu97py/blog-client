@@ -1,4 +1,4 @@
-#article {
+#article_overview {
   background: $background;
   margin: 30px;
   border-radius: 6px;
@@ -10,7 +10,7 @@
     // padding: 0 30px;
     overflow: hidden;
   }
-@import './article_hr.scss';
-@import './article_head.scss';
-@import './article_footer.scss';
+@import './article_overview_hr.scss';
+@import './article_overview_head.scss';
+@import './article_overview_footer.scss';
 }

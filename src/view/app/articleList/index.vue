@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import Article from '@/components/article/no-filter'
+import Article from '@/components/article/overview'
 import Pagination from '@/components/Pagination'
 
 export default {

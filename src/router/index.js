@@ -12,13 +12,17 @@ export default new Router({
     {
       path: '/app',
       name: 'app',
-      redirect: '/app/articleList',
+      redirect: '/app/articleDetails',
       component: () => import('@/components/Layout'),
       children: [
         {
           path: 'articleList',
           name: 'articleList',
           component: () => import('@/view/app/articleList')
+        }, {
+          path: 'articleDetails',
+          name: 'articleDetails',
+          component: () => import('@/view/app/articleDetails')
         }
       ]
     }

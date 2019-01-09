@@ -1,8 +1,8 @@
 <template>
-  <div id="article">
+  <div id="article_details">
     <articleHead :title="title" :time="time"/>
     <articleHr/>
-    <div class="article_body" ref="article_body" v-html="content"></div>
+    <div class="article_details_body" ref="article_details_body" v-html="content"></div>
     <articleHr/>
     <articleFooter/>
   </div>
@@ -19,7 +19,7 @@ import Prism from 'prismjs'
  * content="内容"
  */
 export default {
-  name: 'Article',
+  name: 'article_details',
   props: {
     title: {
       type: String,

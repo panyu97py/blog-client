@@ -1,27 +1,17 @@
-#article_footer {
+#article_overview_footer {
     //文字不可被选中
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  .article_tag_icon {
+  .article_overview_tag_icon {
     color: $font_color;
     font-size: 20px;
     line-height: 18px;
     float: left;
     margin: 5px;
   }
-  .article_tag_list{
-    float: left;
-    margin: 0;
-    padding: 0;
-    .article_tag_list_item{
-      position: relative;
-      float: left;
-      list-style: none;
-    }
-  }
-  .article_show_all{
+  .article_overview_show_all{
     cursor: pointer;
     background: #258fb8;
     height: 18px;
@@ -33,7 +23,7 @@
     color:white;
     transition: background 1s;
   }
-  .article_show_all:hover{
+  .article_overview_show_all:hover{
     opacity: 0.5;
     // background: none;
     // color:  $font_color;

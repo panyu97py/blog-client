@@ -1,0 +1,11 @@
+#article_details {
+  background: $background;
+  margin: 30px;
+  border-radius: 6px;
+  box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  -webkit-box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.46);
+  padding: 15px 30px;
+@import './article_details_hr.scss';
+@import './article_details_head.scss';
+@import './article_details_footer.scss';
+}
