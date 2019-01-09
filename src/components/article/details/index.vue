@@ -1,6 +1,6 @@
 <template>
   <div id="article_details">
-    <articleHead :title="title" :time="time"/>
+    <articleHead :title="title" :time="getTime(time)"/>
     <articleHr/>
     <div class="article_details_body" ref="article_details_body" v-html="content"></div>
     <articleHr/>
@@ -39,9 +39,22 @@ export default {
     articleFooter,
     articleHr
   },
+  watch: {
+    content: {
+      deep: true,
+      handler () {
+        setTimeout(() => { Prism.highlightAll() }, 10)
+      }
+    }
+  },
+  methods: {
+    getTime (time) {
+      let {year, month, day} = this.$utils.timeConversion(time)
+      return year + '-' + month + '-' + day
+    }
+  },
   mounted () {
     Prism.highlightAll()
-    // Prism.highlightElement(this.$refs.article_body)
   }
 }
 </script>

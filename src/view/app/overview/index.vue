@@ -1,41 +1,41 @@
 <template>
   <div id="articleList">
-    <Article title="标题" time="2018-01-06" :content="content" @clickTitle="$router.push({name:'articleDetails'})" @openTheFull="$router.push({name:'articleDetails'})"/>
-    <Article title="标题" time="2018-01-06" :content="content" @clickTitle="$router.push({name:'articleDetails'})" @openTheFull="$router.push({name:'articleDetails'})"/>
-    <Article title="标题" time="2018-01-06" :content="content" @clickTitle="$router.push({name:'articleDetails'})" @openTheFull="$router.push({name:'articleDetails'})"/>
-    <Article title="标题" time="2018-01-06" :content="content" @clickTitle="$router.push({name:'articleDetails'})" @openTheFull="$router.push({name:'articleDetails'})"/>
-
+    <Article
+      v-for=" article in articleList"
+      :key="article.article_id"
+      :title="article.article_title"
+      :content="article.article_content"
+      :time="article.article_date"
+      @clickTitle="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
+      @openTheFull="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
+    />
     <Pagination v-model="currentPage" :totalPage="10"/>
   </div>
 </template>
 <script>
 import Article from '@/components/article/overview'
 import Pagination from '@/components/Pagination'
-
+import {mapGetters, mapActions} from 'vuex'
 export default {
   name: 'articleList',
   data () {
     return {
-      currentPage: 1,
-      content: `<pre class="language-javascript">
-    <code>import Article from '@/components/article'
-      export default {
-        name: 'articleList',
-        data () {
-          return {
-
-          }
-        },
-        components: {
-          Article
-        }
-      }</code>
-</pre>`
+      // 当前页码
+      currentPage: 1
     }
   },
   components: {
     Article,
     Pagination
+  },
+  computed: {
+    ...mapGetters(['articleList'])
+  },
+  methods: {
+    ...mapActions(['getArticleList'])
+  },
+  mounted () {
+    this.getArticleList()
   }
 }
 </script>

@@ -5,7 +5,7 @@ import request from '@/server/utils/request'
  */
 export default (articleId) => {
   return request({
-    url: '/:article/edit',
+    url: '/:article/get',
     method: 'get',
     params: {
       article_id: articleId
