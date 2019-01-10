@@ -1,7 +1,7 @@
 <template>
   <div id="articleSketch">
     <ArticleSketch v-for="article in arricleList" :key="article.article_id" :article="article"/>
-    <Pagination v-model="currentPage" :totalPage="10"/>
+    <Pagination v-model="currentPage" :totalPage="totalPage"/>
   </div>
 </template>
 <script>
@@ -13,6 +13,7 @@ export default {
   data () {
     return {
       currentPage: 10,
+      totalPage: 10,
       arricleList: []
     }
   },
@@ -23,6 +24,14 @@ export default {
   computed: {
     label_id () {
       return this.$route.query.label_id
+    }
+  },
+  watch: {
+    label_id: {
+      deep: true,
+      handler (labelId) {
+        this.getArticleList(labelId)
+      }
     }
   },
   methods: {
