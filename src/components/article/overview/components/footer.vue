@@ -9,7 +9,6 @@
       <articleTag tagName="标签1"/>
     </articleTagList>
     <p class="article_overview_show_all" @click="$emit('openTheFull')">展开全文 > ></p>
-    <div style="clear:both"/>
   </div>
 </template>
 <script>

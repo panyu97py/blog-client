@@ -1,6 +1,7 @@
   // 文章头部
   #article_overview_head {
     border-left: rgba(63, 63, 63, 0) 5px solid;
+    @include clearfix;
     .article_overview_title {
       cursor: pointer;
       color: $font_color;
@@ -17,7 +18,6 @@
       color: $font_color;
       width: 120px;
       float: right;
-  
       margin-right: 10px;
       .article_overview_time_icon {
         font-size: 25px;

@@ -1,0 +1,9 @@
+// @include 方法名;
+// @mixin 定义方法名 { }
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

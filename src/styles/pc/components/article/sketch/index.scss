@@ -1,4 +1,7 @@
 #article_sketch{
+  .article_sketch_head,.article_sketch_footer{
+    @include clearfix;
+  }
   // padding: 20px;
   margin: 30px;
   border-radius: 6px;

@@ -1,5 +1,6 @@
   // 文章头部
   #article_details_head {
+    @include clearfix;
     border-left: rgba(63, 63, 63, 0) 5px solid;
     .article_details_title {
       color: $font_color;

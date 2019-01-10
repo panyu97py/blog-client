@@ -5,7 +5,6 @@
       <svg-icon icon-class="date" class="article_overview_time_icon"/>
       <p class="article_overview_time_text">{{getTime(time)}}</p>
     </div>
-    <div style="clear:both"/>
   </div>
 </template>
 <script>

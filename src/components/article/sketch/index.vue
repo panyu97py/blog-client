@@ -1,14 +1,13 @@
 <template>
   <div id="article_sketch">
-    <div>
+    <div class="article_sketch_head">
       <p class="article_sketch_title" @click="$emit('ToDetail')">{{title}}</p>
       <div class="article_sketch_time">
         <svg-icon icon-class="date" class="article_sketch_time_icon"/>
         <p class="article_sketch_time_text">{{time}}</p>
       </div>
-      <div style="clear:both"/>
     </div>
-    <div>
+    <div class="article_sketch_footer">
       <svg-icon icon-class="tag" class="article_sketch_tag_icon"/>
       <articleTagList>
         <articleTag tagName="标签1"/>
@@ -17,7 +16,6 @@
         <articleTag tagName="标签1"/>
         <articleTag tagName="标签1"/>
       </articleTagList>
-       <div style="clear:both"/>
     </div>
   </div>
 </template>

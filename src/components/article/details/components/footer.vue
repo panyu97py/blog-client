@@ -1,6 +1,5 @@
 <template>
   <div id="article_footer">
-    <!-- <div style="clear:both"/> -->
   </div>
 </template>
 <script>

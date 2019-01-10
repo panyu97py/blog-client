@@ -13,7 +13,6 @@
       <articleTag tagName="标签1"/>
       <articleTag tagName="标签1"/>
     </articleTagList>
-    <div style="clear:both"/>
   </div>
 </template>
 <script>
