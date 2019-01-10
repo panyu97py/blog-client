@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
-// import store from '@/store'
+import store from '@/store'
 import convertUri from './convertUri'
 // import router from '@/router'
 
@@ -14,6 +14,7 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     config.url = convertUri(config.url)
+    if (store.getters.token) { console.log(store.getters.token) }
     // 请求头带token
     // if (
     //   store.getters.accessToken &&
