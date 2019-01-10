@@ -1,5 +1,5 @@
 var api = {}
-if (process.env.ENV === 'production') {
+if (process.env.ENV === 'prod') {
   api = require('../config/api.prod').default
 } else {
   api = require('../config/api.dev').default

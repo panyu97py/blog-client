@@ -10,7 +10,7 @@ install:
 - npm install npm -g
 - npm install --registry=https://registry.npm.taobao.org
 script:
-- npm run build
+- npm run build:dev
 # after_success:
 # - cd ./dist
 # - git init
