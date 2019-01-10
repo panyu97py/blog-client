@@ -14,7 +14,7 @@
   user-select: none;
   @import "./variable.scss";
   @import './mixin.scss';
-
+  @import './transition.scss';
   @import "./components/article/index.scss";
   @import "./components/layout/index.scss";
   @import "./components/tagList/index.scss";

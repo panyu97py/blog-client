@@ -7,11 +7,7 @@
     </div>
         <svg-icon icon-class="tag" class="article_details_tag_icon"/>
     <articleTagList>
-      <articleTag tagName="标签1"/>
-      <articleTag tagName="标签1"/>
-      <articleTag tagName="标签1"/>
-      <articleTag tagName="标签1"/>
-      <articleTag tagName="标签1"/>
+      <articleTag v-for="label in labels" :key="label.label_id" :tagName="label.label_name"/>
     </articleTagList>
   </div>
 </template>
@@ -23,6 +19,10 @@ export default {
   props: {
     title: {
       type: String,
+      required: true
+    },
+    labels: {
+      type: Array,
       required: true
     },
     time: {

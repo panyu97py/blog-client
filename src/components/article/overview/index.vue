@@ -1,10 +1,10 @@
 <template>
   <div id="article_overview">
-    <articleHead :title="title" :time="time" @clickTitle="$emit('clickTitle')"/>
+    <articleHead :title="article.article_title" :time="article.article_date" @clickTitle="$emit('clickTitle')"/>
     <articleHr/>
-    <div class="article_overview_body" ref="article_overview_body" v-html="content"></div>
+    <div class="article_overview_body" ref="article_overview_body" v-html="article.article_content"></div>
     <articleHr/>
-    <articleFooter  @openTheFull="$emit('openTheFull')"/>
+    <articleFooter :labels="article.article_labels" @openTheFull="$emit('openTheFull')"/>
   </div>
 </template>
 <script>
@@ -21,17 +21,9 @@ import Prism from 'prismjs'
 export default {
   name: 'Article',
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    time: {
-      type: String,
-      required: true
-    },
-    content: {
-      type: String,
-      required: true
+    article: {
+      type: Object,
+      default: () => { return {article_title: '', article_date: '', article_labels: []} }
     }
   },
   components: {

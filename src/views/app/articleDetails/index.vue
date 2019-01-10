@@ -1,10 +1,6 @@
 <template>
   <div id="articleDetails">
-    <Article
-      :title="article?article.article_title:'加载中...'"
-      :time="article?article.article_date:'加载中...'"
-      :content="article?article.article_content:'加载中...'"
-    />
+    <Article :article="article" v-if="article"/>
   </div>
 </template>
 <script>
@@ -33,7 +29,10 @@ export default {
         return res
       } else {
         let res = await this.getArticleList()
-        return res.data
+        res = res.data.find(item => {
+          return item.article_id === this.article_id
+        })
+        return res
       }
     }
   },

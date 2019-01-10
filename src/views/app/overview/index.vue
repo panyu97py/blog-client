@@ -3,9 +3,7 @@
     <Article
       v-for=" article in articleList"
       :key="article.article_id"
-      :title="article.article_title"
-      :content="article.article_content"
-      :time="article.article_date"
+      :article="article"
       @clickTitle="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
       @openTheFull="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
     />

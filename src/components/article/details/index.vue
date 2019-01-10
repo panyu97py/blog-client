@@ -1,8 +1,8 @@
 <template>
   <div id="article_details">
-    <articleHead :title="title" :time="getTime(time)"/>
+    <articleHead :title="article.article_title" :time="getTime(article.article_date)" :labels="article?article.article_labels:[]"/>
     <articleHr/>
-    <div class="article_details_body" ref="article_details_body" v-html="content"></div>
+    <div class="article_details_body" ref="article_details_body" v-html="article.article_content"></div>
     <articleHr/>
     <articleFooter/>
   </div>
@@ -21,16 +21,8 @@ import Prism from 'prismjs'
 export default {
   name: 'article_details',
   props: {
-    title: {
-      type: String,
-      required: true
-    },
-    time: {
-      type: String,
-      required: true
-    },
-    content: {
-      type: String,
+    article: {
+      type: Object,
       required: true
     }
   },
@@ -38,14 +30,6 @@ export default {
     articleHead,
     articleFooter,
     articleHr
-  },
-  watch: {
-    content: {
-      deep: true,
-      handler () {
-        setTimeout(() => { Prism.highlightAll() }, 10)
-      }
-    }
   },
   methods: {
     getTime (time) {

@@ -13,13 +13,13 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build:dev": "cross-env NODE_ENV=dev node build/build.js",
     "build:prod": "cross-env NODE_ENV=prod node build/build.js"
-
   },
   "dependencies": {
     "axios": "^0.18.0",
     "babel-plugin-prismjs": "^1.0.2",
     "cross-env": "^5.2.0",
     "element-ui": "^2.4.11",
+    "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "prismjs": "^1.15.0",
     "sass-loader": "^7.1.0",
