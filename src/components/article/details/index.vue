@@ -1,6 +1,11 @@
 <template>
   <div id="article_details">
-    <articleHead @clickLabel="(label)=>{$emit('clickLabel',label)}" :title="article.article_title" :time="getTime(article.article_date)" :labels="article?article.article_labels:[]"/>
+    <articleHead
+      @clickLabel="(label)=>{$emit('clickLabel',label)}"
+      :title="article.article_title"
+      :time="getTime(article.article_date)"
+      :labels="article.article_labels"
+    />
     <articleHr/>
     <div class="article_details_body" ref="article_details_body" v-html="article.article_content"></div>
     <articleHr/>
@@ -33,7 +38,7 @@ export default {
   },
   methods: {
     getTime (time) {
-      let {year, month, day} = this.$utils.timeConversion(time)
+      let { year, month, day } = this.$utils.timeConversion(time)
       return year + '-' + month + '-' + day
     }
   },
