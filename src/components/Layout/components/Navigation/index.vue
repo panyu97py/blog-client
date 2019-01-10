@@ -20,7 +20,7 @@ export default {
   data () {
     return {
       imgSrc: '/static/img/Layout/Navigation/User head.JPG',
-      name: 'panyu',
+      name: '鹿丶羽',
       model: 'menu'
     }
   },
@@ -28,14 +28,6 @@ export default {
     NavigationSelect,
     NavigationMenu,
     NavigationLabelList
-  },
-  methods: {
-    test () {
-      console.log('test')
-    },
-    test2 () {
-      console.log('test2')
-    }
   }
 }
 </script>

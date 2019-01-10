@@ -1,7 +1,12 @@
 <template>
   <div id="Navigation_label_list">
     <articleLabelList>
-      <articleLabel v-for=" label in labelList" :key="label.label_id" :labelName="label.label_name" @click="$router.push({name:'articleSketch'})"/>
+      <articleLabel
+        v-for=" label in labelList"
+        :key="label.label_id"
+        :labelName="label.label_name"
+        @click="$router.push({name:'articleSketch',query:{label_id:label.label_id}})"
+      />
     </articleLabelList>
   </div>
 </template>
@@ -21,8 +26,7 @@ export default {
   },
   methods: {
     async getLabelList () {
-      let res = await this.$api.getLabel()
-      this.labelList = res.data
+      this.labelList = await this.$api.getLabel()
     }
   },
   mounted () {

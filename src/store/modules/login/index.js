@@ -14,7 +14,7 @@ const user = {
   actions: {
     async login ({commit}, {username, password}) {
       let res = await api.login(username, password)
-      commit('SET_TOKEN', res.token)
+      commit('SET_TOKEN', res)
       return res
     }
   }

@@ -33,7 +33,7 @@ export default {
         return res
       } else {
         let res = await this.getArticleList()
-        res = res.data.find(item => {
+        res = res.find(item => {
           return item.article_id === this.article_id
         })
         return res

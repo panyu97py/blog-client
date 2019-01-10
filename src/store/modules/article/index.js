@@ -14,7 +14,7 @@ const article = {
   actions: {
     async getArticleList ({commit}) {
       let res = await api.getArticle()
-      commit('SET_ARTICLELIST', res.data)
+      commit('SET_ARTICLELIST', res)
       return res
     }
   }

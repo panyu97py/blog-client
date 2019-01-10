@@ -8,7 +8,6 @@
         <p @click="selectedOption='menu'">菜单</p>
         <p @click="selectedOption='tag'">标签</p>
       </div>
-    <!-- v-if="SelectStatus" -->
   </div>
 </template>
 <script>

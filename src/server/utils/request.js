@@ -39,7 +39,7 @@ service.interceptors.response.use(
      * code为非200是抛错 可结合自己业务进行修改
      */
     const res = response.data
-    if (response.status !== 200) {
+    if (response.status !== 200 || response.data.status === 'fail') {
       Message({
         message: res.message,
         type: 'error',
@@ -47,7 +47,7 @@ service.interceptors.response.use(
       })
       return Promise.reject(res)
     } else {
-      return response.data
+      return response.data.data
     }
   },
   /**
