@@ -23,13 +23,42 @@ export default {
         { label: 'test', path: '' },
         { label: 'test', path: '' },
         { label: 'test', path: '' }
-      ]
+      ],
+      list: []
+    }
+  },
+  computed: {
+    router () {
+      return this.$router.options.routes
     }
   },
   methods: {
     routerTo (name) {
       this.$router.push({name})
+    },
+    computed (data) {
+      data.map(item => {
+        if (!item.hidden) {
+          this.list.push(item)
+        } else {
+          if (item.children) {
+            this.computed(item.children)
+          }
+        }
+      })
     }
+  },
+  watch: {
+    list: {
+      deep: true,
+      handler (list) {
+        console.log(list)
+      }
+    }
+  },
+  mounted () {
+    console.log(this.router)
+    this.computed(this.router)
   }
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div id="articleDetails">
     <Article
-      :title="article?article.article_title:'加载中'"
-      :time="article?article.article_date:'加载中'"
-      :content="article?article.article_content:'加载中'"
+      :title="article?article.article_title:'加载中...'"
+      :time="article?article.article_date:'加载中...'"
+      :content="article?article.article_content:'加载中...'"
     />
   </div>
 </template>
