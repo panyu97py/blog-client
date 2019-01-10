@@ -6,6 +6,7 @@
       :article="article"
       @clickTitle="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
       @openTheFull="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
+      @clickLabel="(label)=>{$router.push({name:'articleSketch',query:{label_id:label.label_id}})}"
     />
     <Pagination v-model="currentPage" :totalPage="10"/>
   </div>

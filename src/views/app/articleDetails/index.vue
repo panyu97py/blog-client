@@ -1,6 +1,10 @@
 <template>
   <div id="articleDetails">
-    <Article :article="article" v-if="article"/>
+    <Article
+      :article="article"
+      v-if="article"
+      @clickLabel="(label)=>{$router.push({name:'articleSketch',query:{label_id:label.label_id}})}"
+    />
   </div>
 </template>
 <script>

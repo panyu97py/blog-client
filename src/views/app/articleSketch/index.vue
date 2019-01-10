@@ -22,7 +22,11 @@ export default {
   components: {
     ArticleSketch,
     Pagination
-
+  },
+  computed: {
+    label_id () {
+      return this.$route.query.label_id
+    }
   }
 }
 </script>

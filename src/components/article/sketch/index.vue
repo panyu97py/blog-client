@@ -9,19 +9,19 @@
     </div>
     <div class="article_sketch_footer">
       <svg-icon icon-class="tag" class="article_sketch_tag_icon"/>
-      <articleTagList>
-        <articleTag tagName="标签1"/>
-        <articleTag tagName="标签1"/>
-        <articleTag tagName="标签1"/>
-        <articleTag tagName="标签1"/>
-        <articleTag tagName="标签1"/>
-      </articleTagList>
+      <articleLabelList>
+        <articlelabel labelName="标签1"/>
+        <articlelabel labelName="标签1"/>
+        <articlelabel labelName="标签1"/>
+        <articlelabel labelName="标签1"/>
+        <articlelabel labelName="标签1"/>
+      </articleLabelList>
     </div>
   </div>
 </template>
 <script>
-import articleTag from '@/components/tagList/item'
-import articleTagList from '@/components/tagList'
+import articlelabel from '@/components/labelList/item'
+import articleLabelList from '@/components/labelList'
 export default {
   name: 'sketch',
   data () {
@@ -31,8 +31,8 @@ export default {
     }
   },
   components: {
-    articleTag,
-    articleTagList
+    articlelabel,
+    articleLabelList
   }
 }
 </script>

@@ -6,14 +6,14 @@
       <p class="article_details_time_text">{{time}}</p>
     </div>
         <svg-icon icon-class="tag" class="article_details_tag_icon"/>
-    <articleTagList>
-      <articleTag v-for="label in labels" :key="label.label_id" :tagName="label.label_name"/>
-    </articleTagList>
+    <articleLabelList>
+      <articlelabel v-for="label in labels" :key="label.label_id" :labelName="label.label_name" @click="$emit('clickLabel',label)"/>
+    </articleLabelList>
   </div>
 </template>
 <script>
-import articleTag from '@/components/tagList/item'
-import articleTagList from '@/components/tagList'
+import articlelabel from '@/components/labelList/item'
+import articleLabelList from '@/components/labelList'
 export default {
   name: 'article_details_head',
   props: {
@@ -31,8 +31,8 @@ export default {
     }
   },
   components: {
-    articleTag,
-    articleTagList
+    articlelabel,
+    articleLabelList
   }
 }
 </script>

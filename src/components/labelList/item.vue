@@ -1,6 +1,6 @@
 <template>
   <li class="tag_list_item" :class="theme">
-     <span class="tag" @click="$emit('click')">{{tagName}}</span>
+     <span class="tag" @click="$emit('click')">{{labelName}}</span>
   </li>
 </template>
 <script>
@@ -18,7 +18,7 @@ export default {
     }
   },
   props: {
-    tagName: {
+    labelName: {
       type: String,
       required: true
     }

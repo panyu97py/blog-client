@@ -1,20 +1,20 @@
 <template>
   <div id="article_overview_footer">
     <svg-icon icon-class="tag" class="article_overview_tag_icon"/>
-    <articleTagList>
-      <articleTag v-for="label in labels" :key="label.label_id" :tagName="label.label_name"/>
-    </articleTagList>
+    <articleLabelList>
+      <articlelabel v-for="label in labels" :key="label.label_id" :labelName="label.label_name" @click="$emit('clickLabel',label)"/>
+    </articleLabelList>
     <p class="article_overview_show_all" @click="$emit('openTheFull')">展开全文 > ></p>
   </div>
 </template>
 <script>
-import articleTag from '@/components/tagList/item'
-import articleTagList from '@/components/tagList'
+import articlelabel from '@/components/labelList/item'
+import articleLabelList from '@/components/labelList'
 export default {
   name: 'article_overview_footer',
   components: {
-    articleTag,
-    articleTagList
+    articlelabel,
+    articleLabelList
   },
   props: {
     labels: {

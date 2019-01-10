@@ -3,13 +3,13 @@
   </div>
 </template>
 <script>
-// import articleTag from '@/components/tagList/item'
-// import articleTagList from '@/components/tagList'
+// import articleLabelList from '@/components/labelList/item'
+// import articleLabelList from '@/components/labelList'
 export default {
   name: 'article_footer'
   // components: {
   //   articleTag,
-  //   articleTagList
+  //   articleLabelList
   // }
 }
 </script>

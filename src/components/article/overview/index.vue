@@ -4,7 +4,7 @@
     <articleHr/>
     <div class="article_overview_body" ref="article_overview_body" v-html="article.article_content"></div>
     <articleHr/>
-    <articleFooter :labels="article.article_labels" @openTheFull="$emit('openTheFull')"/>
+    <articleFooter :labels="article.article_labels" @openTheFull="$emit('openTheFull')" @clickLabel="(label)=>{$emit('clickLabel',label)}"/>
   </div>
 </template>
 <script>

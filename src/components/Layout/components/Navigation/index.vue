@@ -7,13 +7,13 @@
       <p>--路漫漫其修远兮--</p>
       <NavigationSelect v-model="model"/>
       <NavigationMenu v-if="model==='menu'"/>
-      <NavigationTagList v-else-if="model==='tag'"/>
+      <NavigationLabelList v-else-if="model==='tag'"/>
     </div>
   </div>
 </template>
 <script>
 import NavigationMenu from './Navigation_menu'
-import NavigationTagList from './Navigation_tag_list'
+import NavigationLabelList from './Navigation_label_list'
 import NavigationSelect from './Navigation_select'
 export default {
   name: 'Navigation',
@@ -27,7 +27,7 @@ export default {
   components: {
     NavigationSelect,
     NavigationMenu,
-    NavigationTagList
+    NavigationLabelList
   },
   methods: {
     test () {

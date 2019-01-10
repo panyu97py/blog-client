@@ -1,6 +1,6 @@
 <template>
   <div id="article_details">
-    <articleHead :title="article.article_title" :time="getTime(article.article_date)" :labels="article?article.article_labels:[]"/>
+    <articleHead @clickLabel="(label)=>{$emit('clickLabel',label)}" :title="article.article_title" :time="getTime(article.article_date)" :labels="article?article.article_labels:[]"/>
     <articleHr/>
     <div class="article_details_body" ref="article_details_body" v-html="article.article_content"></div>
     <articleHr/>
