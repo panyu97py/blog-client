@@ -7,6 +7,11 @@
     clear: both;
   }
 }
+@mixin No-Scrollbar{
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
 @mixin App-Scrollbar{
   ::-webkit-scrollbar {
     width: 10px;

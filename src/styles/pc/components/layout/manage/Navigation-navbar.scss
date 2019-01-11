@@ -1,9 +1,7 @@
 .Navigation_sidebar {
   float: left;
   height: 100%;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+  @include  No-Scrollbar;
   .Navigation_menu {
     height: 100% !important;
     overflow-y: auto;
