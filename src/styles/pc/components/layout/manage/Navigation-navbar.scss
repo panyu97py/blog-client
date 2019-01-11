@@ -1,0 +1,18 @@
+.Navigation_sidebar {
+  float: left;
+  height: 100%;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  .Navigation_menu {
+    height: 100% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .Navigation_menu:not(.el-menu--collapse) {
+    width: 200px;
+  }
+}
+.Navigation_navbar {
+  float: left;
+}
