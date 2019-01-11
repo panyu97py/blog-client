@@ -1,9 +1,11 @@
+// import appLayout from ' @/components/Layout/app'
+const appLayout = require('@/components/Layout/app')
 export default [
   {
     path: '/app',
     name: 'app',
     redirect: '/app/overview',
-    component: () => import('@/components/Layout/app'),
+    component: appLayout,
     hidden: true,
     children: [
       {
