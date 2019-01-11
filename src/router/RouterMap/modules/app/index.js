@@ -1,5 +1,4 @@
-// import appLayout from ' @/components/Layout/app'
-const appLayout = require('@/components/Layout/app')
+import appLayout from '@/components/Layout/app'
 export default [
   {
     path: '/app',

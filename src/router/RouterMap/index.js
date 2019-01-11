@@ -3,7 +3,7 @@ import manage from './modules/manage'
 export default [
   {
     path: '/',
-    redirect: '/app',
+    redirect: '/manage',
     hidden: true
   },
   {

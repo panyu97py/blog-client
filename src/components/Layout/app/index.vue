@@ -1,5 +1,5 @@
 <template>
-  <div id="Layout_app">
+  <div id="app_layout">
     <Navigation/>
     <AppMain/>
   </div>
@@ -9,7 +9,7 @@ import Navigation from './components/Navigation'
 import AppMain from './components/App-main'
 
 export default {
-  name: 'Layout',
+  name: 'app_layout',
   components: {
     Navigation,
     AppMain

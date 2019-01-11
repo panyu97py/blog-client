@@ -1,4 +1,4 @@
-const manageLayout = require('@/components/Layout/manage')
+import manageLayout from '@/components/Layout/manage'
 export default [
   {
     path: '/manage',

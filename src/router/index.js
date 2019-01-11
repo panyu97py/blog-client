@@ -5,5 +5,5 @@ Vue.use(Router)
 const router = new Router({
   routes: routerMap
 })
-router.beforeEach((to, from, next) => {})
+// router.beforeEach((to, from, next) => {})
 export default router
