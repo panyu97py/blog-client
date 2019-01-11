@@ -1,5 +1,5 @@
 <template>
-  <div id="Layout">
+  <div id="Layout_app">
     <Navigation/>
     <AppMain/>
   </div>
