@@ -3,4 +3,5 @@
   background: $background;
   height: 100%;
   width: calc(100% - 300px);
+  @include App-Scrollbar;
 }

@@ -28,36 +28,4 @@
   pre {
     border-radius: 5px;
   }
-  // 自定义右侧滚动条
-  ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
-  }
-  ::-webkit-scrollbar-button:start:increment,
-  ::-webkit-scrollbar-button:end:decrement {
-    display: none;
-  }
-  ::-webkit-scrollbar-corner {
-    display: block;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  ::-webkit-scrollbar-track,
-  ::-webkit-scrollbar-thumb {
-    border-right: 1px solid transparent;
-    border-left: 1px solid transparent;
-  }
-  ::-webkit-scrollbar-track:hover {
-    background-color: rgba(0, 0, 0, 0.15);
-  }
 }
