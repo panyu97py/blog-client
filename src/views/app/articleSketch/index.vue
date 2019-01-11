@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     async getArticleList (labelId) {
-      this.arricleList = await this.$api.getArticle({labelId})
+      this.arricleList = await this.$api.getArticle({ labelId })
     }
   },
   mounted () {

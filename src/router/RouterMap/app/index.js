@@ -3,7 +3,7 @@ export default [
     path: '/app',
     name: 'app',
     redirect: '/app/overview',
-    component: () => import('@/components/Layout'),
+    component: () => import('@/components/Layout/app'),
     hidden: true,
     children: [
       {
