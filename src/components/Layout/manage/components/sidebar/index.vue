@@ -1,9 +1,9 @@
 <template>
-  <!-- <el-scrollbar wrap-class="scrollbar-wrapper"> -->
-  <div class="Navigation_sidebar">
+  <div :class="isCollapse?'Navigation_sidebar':'Navigation_sidebar_collapse'">
     <el-menu
       class="Navigation_menu"
       :show-timeout="200"
+      :hide-timeout="200"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"

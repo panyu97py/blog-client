@@ -1,7 +1,7 @@
 <template>
   <div id="manage_layout">
     <sidebar :isCollapse="isCollapse"/>
-    <div style="width:calc(100% - 200px);height:100%;background:red;margin-left:200px;">
+    <div :class="isCollapse?'manage_layout_main':'manage_layout_main_collapse'">
       <navbar v-model="isCollapse"/>
       <manageMain/>
     </div>

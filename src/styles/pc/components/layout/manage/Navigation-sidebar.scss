@@ -1,0 +1,29 @@
+@mixin reset-element-ui-css {
+  .horizontal-collapse-transition {
+    transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+  }
+}
+.Navigation_sidebar_collapse,.Navigation_sidebar{
+  height: 100%;
+  transition: width  $transition_time;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1001;
+  @include No-Scrollbar;
+  @include reset-element-ui-css;
+}
+.Navigation_sidebar_collapse {
+  width: $sidebar_collapse_width;
+}
+.Navigation_sidebar {
+  width:$sidebar_width;
+}
+.Navigation_menu {
+  height: 100% !important;
+  width: 100% !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+

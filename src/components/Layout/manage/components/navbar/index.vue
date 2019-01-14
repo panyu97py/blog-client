@@ -1,10 +1,11 @@
 <template>
-<div>
-    <el-radio-group v-model="isCollapse" class="Navigation_navbar">
-    <el-radio-button :label="false">展开</el-radio-button>
-    <el-radio-button :label="true">收起</el-radio-button>
-  </el-radio-group>
-</div>
+  <div class="Navigation_navbar">
+    <svg-icon
+      icon-class="manage_menu"
+      :class="isCollapse?'manage_menu':'manage_menu_collapse'"
+      @click="isCollapse=!isCollapse"
+    />
+  </div>
 </template>
 <script>
 export default {

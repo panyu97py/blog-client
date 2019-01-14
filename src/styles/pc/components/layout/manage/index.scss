@@ -1,6 +1,23 @@
 #manage_layout {
   width: 100%;
   height: 100%;
-  float: left;
-  @import './Navigation-navbar.scss';
+  $transition_time:0.3s;
+  $sidebar_width: 65px;
+  $sidebar_collapse_width: 200px;
+  $navbar_height:50px;
+  @import './Navigation-sidebar.scss';
+  @import './Navigation_navbar.scss';
+  @import './Manage-main.scss';
+  .manage_layout_main_collapse,.manage_layout_main{
+    height: 100%;
+    background-color: rgb(242, 242, 242);
+    -webkit-transition: margin-left  $transition_time;
+    transition: margin-left $transition_time;
+  }
+  .manage_layout_main_collapse{
+    margin-left: $sidebar_collapse_width;
+  }
+  .manage_layout_main{
+    margin-left: $sidebar_width;
+  }
 }
