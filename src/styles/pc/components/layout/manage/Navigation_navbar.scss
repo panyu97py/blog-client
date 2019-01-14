@@ -3,12 +3,19 @@
   height: $navbar_height;
   .manage_menu,.manage_menu_collapse{
     cursor: pointer;
-    font-size: 20px;
-    padding: 15px;
+    $icon_size:20px;
+    font-size: $icon_size;
+    padding: ($navbar_height - $icon_size) / 2;
     transform:rotate(0deg);
     transition: transform 0.4s;
+    vertical-align:0;
+    display: inline-block;
   }
   .manage_menu_collapse{
     transform:rotate(90deg);
+  }
+  .manage_breadcrumb{
+    display: inline-block;
+    line-height: $navbar_height;
   }
 }

@@ -4,6 +4,7 @@
       class="Navigation_menu"
       :show-timeout="200"
       :hide-timeout="200"
+      :unique-opened="true"
       @open="handleOpen"
       @close="handleClose"
       :collapse="isCollapse"
@@ -25,14 +26,6 @@
         <el-menu-item-group title="分组2">
           <el-menu-item index="1-3">选项3</el-menu-item>
         </el-menu-item-group>
-        <el-submenu index="1-4">
-          <span slot="title">选项4</span>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
-        <el-submenu index="1-4">
-          <span slot="title">选项4</span>
-          <el-menu-item index="1-4-1">选项1</el-menu-item>
-        </el-submenu>
         <el-submenu index="1-4">
           <span slot="title">选项4</span>
           <el-menu-item index="1-4-1">选项1</el-menu-item>

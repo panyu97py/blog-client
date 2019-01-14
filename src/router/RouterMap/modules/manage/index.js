@@ -11,7 +11,7 @@ export default [
         path: 'overview',
         name: 'manage_overview',
         component: () => import('@/views/manage/overview'),
-        meta: { title: '首页' }
+        meta: { title: '首页', requireLogin: true, authorizedRoles: [] }
       }
     ]
   }
