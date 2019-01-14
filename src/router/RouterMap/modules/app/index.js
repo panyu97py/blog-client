@@ -9,7 +9,7 @@ export default [
     children: [
       {
         path: 'overview',
-        name: 'overview',
+        name: 'app_overview',
         component: () => import('@/views/app/overview'),
         meta: { title: '首页' }
       },
