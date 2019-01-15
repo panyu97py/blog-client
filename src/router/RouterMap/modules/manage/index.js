@@ -10,7 +10,7 @@ export default [
       {
         path: 'overview',
         name: 'manage_overview',
-        component: () => import('@/views/manage/overview'),
+        component: () => import('@/views/manage/articleManage/createArticles'),
         meta: { title: '首页', requireLogin: true, authorizedRoles: [] }
       }
     ]

@@ -68,6 +68,9 @@ const webpackConfig = merge(baseWebpackConfig, {
         : config.build.index,
       template: 'index.html',
       inject: true,
+      templateParameters: {
+        BASE_URL: config.build.assetsPublicPath + config.build.assetsSubDirectory,
+      },
       minify: {
         removeComments: true,
         collapseWhitespace: true,
