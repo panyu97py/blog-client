@@ -1,4 +1,4 @@
-import manageLayout from '@/components/Layout/manage'
+import manageLayout from '@/components/Layout/manage';
 export default [
   {
     path: '/manage',
@@ -10,8 +10,14 @@ export default [
       {
         path: 'overview',
         name: 'manage_overview',
-        component: () => import('@/views/manage/articleManage/createArticles'),
+        component: () => import('@/views/manage/overview'),
         meta: { title: '首页', requireLogin: true, authorizedRoles: [] }
+      },
+      {
+        path: 'createArticles',
+        name: 'createArticles',
+        component: () => import('@/views/manage/articleManage/createArticles'),
+        meta: { title: '创建文章', requireLogin: true, authorizedRoles: [] }
       }
     ]
   }
