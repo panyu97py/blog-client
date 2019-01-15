@@ -7,11 +7,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  //文字不可选中
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   @import "./variable.scss";
   @import './mixin.scss';
   @import './transition.scss';

@@ -1,5 +1,13 @@
 // @include 方法名;
 // @mixin 定义方法名 { }
+@mixin none-select{
+  //文字不可选中
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @mixin clearfix {
   &:after {
     content: "";
