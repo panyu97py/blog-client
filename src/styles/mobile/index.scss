@@ -14,7 +14,7 @@
   bottom: 0;
   background: url('/static/img/background.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   &:before {
     content: "手机端正在开发中";
     font-family: "wood";
