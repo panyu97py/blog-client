@@ -29,6 +29,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * 路由跳转
+     */
     routerTo (name) {
       this.$router.push({ name })
     },
