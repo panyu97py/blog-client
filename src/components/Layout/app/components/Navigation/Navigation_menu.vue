@@ -2,7 +2,7 @@
   <div>
     <ul class="Navigation_menu_list">
       <li class="Navigation_menu_item" v-for="(item,index) in menuList" :key="index">
-        <span class="Navigation_menu_item_content" @click="routerTo(item.path)">{{item.label}}</span>
+        <span class="Navigation_menu_item_content" @click="routerTo(item.name)">{{item.label}}</span>
       </li>
     </ul>
     <div class="Navigation_icon_list">
@@ -17,48 +17,47 @@ export default {
   name: 'Navigation_menu',
   data () {
     return {
-      menuList: [
-        { label: '主页', path: 'overview' },
-        { label: 'test', path: '' },
-        { label: 'test', path: '' },
-        { label: 'test', path: '' },
-        { label: 'test', path: '' }
-      ],
       list: []
     }
   },
   computed: {
-    router () {
+    routerMap () {
       return this.$router.options.routes
+    },
+    menuList () {
+      return this.getMenuList()
     }
   },
   methods: {
     routerTo (name) {
-      this.$router.push({name})
+      this.$router.push({ name })
     },
-    computed (data) {
-      data.map(item => {
-        if (!item.hidden) {
-          this.list.push(item)
-        } else {
+    /**
+     * 筛选路由表
+     * 返回其他模块的根路由
+     * 及app模块中所有不隐藏的路由
+     */
+    getMenuList () {
+      let menuList = []
+      const getAllRouter = routerMap => {
+        routerMap.map(item => {
           if (item.children) {
-            this.computed(item.children)
+            getAllRouter(item.children)
           }
-        }
-      })
-    }
-  },
-  watch: {
-    list: {
-      deep: true,
-      handler (list) {
-        console.log(list)
+          if (
+            !item.hidden &&
+            (item.rootModule === 'app' ||
+              (!item.rootModule && item.name !== 'app'))
+          ) {
+            let name = item.name
+            let label = item.meta.title
+            menuList.push({ name, label })
+          }
+        })
       }
+      getAllRouter(this.routerMap)
+      return menuList
     }
-  },
-  mounted () {
-    console.log(this.router)
-    this.computed(this.router)
   }
 }
 </script>

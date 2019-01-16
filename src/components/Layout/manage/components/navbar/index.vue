@@ -6,10 +6,11 @@
       @click="isCollapse=!isCollapse"
     />
     <el-breadcrumb separator-class="el-icon-arrow-right" class="manage_breadcrumb">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item>活动管理</el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+      <el-breadcrumb-item
+        :to="{ name:item.name }"
+        v-for="item in router"
+        :key="item.name"
+      >{{item.meta.title}}</el-breadcrumb-item>
     </el-breadcrumb>
   </div>
 </template>
@@ -32,6 +33,11 @@ export default {
     value: {
       type: Boolean,
       required: true
+    }
+  },
+  computed: {
+    router () {
+      return this.$route.matched
     }
   }
 }
