@@ -1,7 +1,7 @@
 # blog-client
 
 > A Vue.js project
-[![Build Status](https://www.travis-ci.org/panyu97py/blog_client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog_client)
+## [![Build Status](https://www.travis-ci.org/panyu97py/blog_client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog_client)
 
 ## Build Setup
 
