@@ -92,7 +92,7 @@ export default {
         selector: `#${this.tinymceId}`,
         height: this.height,
         body_class: 'panel-body ',
-        object_resizing: false,
+        object_resizing: true, // 四角图片大小缩放
         toolbar: this.toolbar.length > 0 ? this.toolbar : toolbar,
         menubar: this.menubar,
         plugins: plugins,
