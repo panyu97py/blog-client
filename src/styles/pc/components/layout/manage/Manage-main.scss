@@ -1,5 +1,5 @@
 #manage_main{
-  // height: calc(100% - $navbar_height);
+  min-height: calc( 100% - #{$navbar_height});
   background-color: rgb(242, 242, 242);
   overflow-x: hidden;
   overflow-y: auto;
