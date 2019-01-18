@@ -27,6 +27,14 @@
     left: 0;
     right: 0;
     margin: auto;
+    .Navigation_register,.Navigation_login{
+      padding: 5px 10px;
+    }
+   .Navigation_register:hover,.Navigation_login:hover{
+    border-radius: 2px;
+    padding: 5px 10px;
+    background: #258fb8;
+  }
   }
   .headImg {
     z-index: 1;

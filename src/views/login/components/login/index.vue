@@ -48,7 +48,7 @@ export default {
       this.$refs.loginForm.validate(async (valid) => {
         if (valid) {
           let {username, password} = this.form
-          await this.login(username, password)
+          await this.login({username, password})
           // 若不存在 from 则跳转至博客前台页面
           this.$router.push({name: this.from || 'app'})
         } else {
