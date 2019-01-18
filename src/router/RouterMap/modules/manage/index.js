@@ -10,7 +10,7 @@ export default [
     meta: {
       title: '博客后台',
       icon: 'collection',
-      requireLogin: false,
+      requireLogin: true,
       authorizedRoles: []
     },
     children: [

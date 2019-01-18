@@ -39,8 +39,7 @@ export default {
   },
   props: {
     from: {
-      type: String,
-      required: true
+      type: String
     }
   },
   methods: {
@@ -50,7 +49,8 @@ export default {
         if (valid) {
           let {username, password} = this.form
           await this.login(username, password)
-          this.$router.push({name: this.from})
+          // 若不存在 from 则跳转至博客前台页面
+          this.$router.push({name: this.from || 'app'})
         } else {
           return false
         }

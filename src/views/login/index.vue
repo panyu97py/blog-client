@@ -12,11 +12,12 @@ export default {
   },
   data () {
     return {
-      from: 'app'
+      from: null
     }
   },
   beforeRouteEnter (to, from, next) {
-    next((vm) => { // 参数vm就是当前组件的实例。
+    next((vm) => {
+      // 参数vm就是当前组件的实例。
       vm.from = from.name
     })
   }
