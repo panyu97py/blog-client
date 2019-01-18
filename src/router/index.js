@@ -19,7 +19,6 @@ const getAccessAuthority = (store, to) => {
 }
 router.beforeEach((to, from, next) => {
   let {accessAuthority} = getAccessAuthority(store, to)
-  console.log(accessAuthority)
   if (accessAuthority) {
     next()
   } else {
