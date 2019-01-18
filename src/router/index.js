@@ -2,21 +2,32 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import routerMap from './RouterMap'
 import store from '@/store'
+import { Notification } from 'element-ui'
 Vue.use(Router)
 const router = new Router({
   routes: routerMap
 })
-const getRequireLogin = (to) => {
-  return to.meta
+const getAccessAuthority = (store, to) => {
+  let requireLogin = to.meta
     ? to.meta.requireLogin
       ? to.meta.requireLogin
       : false
     : false
+  let loginStatus = store.getters.loginStatus
+  let accessAuthority = requireLogin ? loginStatus : true
+  return {accessAuthority}
 }
 router.beforeEach((to, from, next) => {
-  console.log(store.getters.token)
-  let requireLogin = getRequireLogin(to)
-  console.log(requireLogin)
-  next()
+  let {accessAuthority} = getAccessAuthority(store, to)
+  console.log(accessAuthority)
+  if (accessAuthority) {
+    next()
+  } else {
+    Notification.error({
+      title: '错误',
+      message: '您还没有登录'
+    })
+    next({name: 'login'})
+  }
 })
 export default router
