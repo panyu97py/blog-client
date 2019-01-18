@@ -3,7 +3,7 @@
     <div class="Navigation_mask"/>
     <div class="Navigation_content">
       <img :src="imgSrc" alt class="headImg">
-      <p>{{name}}</p>
+      <p @click="$router.push({name:'login'})">{{name}}</p>
       <p>--路漫漫其修远兮--</p>
       <NavigationSelect v-model="model"/>
       <NavigationMenu v-if="model==='menu'"/>

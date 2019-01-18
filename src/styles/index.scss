@@ -1,8 +1,9 @@
 //pc 电脑端
 @media (min-width: 768px) {
+  // @import "~element-ui/packages/theme-chalk/src/index";
   @import "./pc/index.scss";
 }
 //mobile 手机端
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
   @import "./mobile/index.scss";
 }

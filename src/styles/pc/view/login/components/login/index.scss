@@ -1,0 +1,35 @@
+#login {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  margin: auto;
+  border-radius: 10px;
+  padding: 50px;
+  background: #efefef;
+  width: 300px;
+  height: 180px;
+  .login_input {
+    margin-bottom: 8px;
+    .el-input__inner {
+      border-radius: 18px;
+      padding-left: 40px;
+    }
+     .el-input__inner:focus {
+      border-color:$font_color;
+  }
+    .login_username_icon,
+    .login_password_icon {
+      font-size: 25px;
+      padding: 7.5px;
+      color:$font_color;
+    }
+  }
+  .login_button {
+    color: white;
+    width: 100%;
+    background: $background;
+  }
+}

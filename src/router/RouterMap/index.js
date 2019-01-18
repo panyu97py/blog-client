@@ -3,11 +3,12 @@ import manage from './modules/manage'
 export default [
   {
     path: '/',
-    redirect: '/manage',
+    redirect: '/app',
     hidden: true
   },
   {
     path: '/login',
+    name: 'login',
     component: () => import('@/views/login'),
     hidden: true
   },
