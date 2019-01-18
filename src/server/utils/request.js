@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { Message } from 'element-ui'
-// import { Notification } from 'element-ui';
+// import { Message } from 'element-ui'
+import { Notification } from 'element-ui'
 import store from '@/store'
 import convertUri from './convertUri'
 // import router from '@/router'
@@ -41,11 +41,11 @@ service.interceptors.response.use(
      */
     const res = response.data
     if (response.status !== 200 || response.data.status === 'fail') {
-      Message({
-        message: res.message,
-        type: 'error',
-        duration: 5 * 1000
-      })
+      // Message({
+      //   message: res.message,
+      //   type: 'error',
+      //   duration: 5 * 1000
+      // })
       return Promise.reject(res)
     } else {
       return response.data.data
@@ -55,27 +55,11 @@ service.interceptors.response.use(
    * 响应出错的处理
    */
   error => {
-    // const statusCode = JSON.parse(JSON.stringify(error)).response.status
-    // console.log(JSON.parse(JSON.stringify(error)).response.data.message) // for debug
-    // invalid_token
-    // const responseData = JSON.parse(JSON.stringify(error)).response.data
-    // const message = responseData.message ? responseData.message : (responseData.error ? responseData.error : error.message)
-    // if (message === 'invalid_token') {
-    //   store.dispatch('Login_out')
-    //   router.push({ name: 'login' })
-    //   Message({
-    //     message: '您的登陆已过期',
-    //     type: 'error',
-    //     duration: 5 * 1000
-    //   })
-    // } else {
-    //   Message({
-    //     message: message,
-    //     type: 'error',
-    //     duration: 5 * 1000
-    //   })
-    // }
-
+    let message = error.response ? error.response.data.message : error.message
+    Notification.error({
+      title: '错误',
+      message: message
+    })
     return Promise.reject(error)
   }
 )
