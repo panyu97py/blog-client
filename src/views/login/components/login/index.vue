@@ -31,7 +31,7 @@ export default {
           { min: 3, message: '长度大于三个字符', trigger: 'blur' }
         ],
         password: [
-          { required: true, message: '请输入密码', trigger: 'change' },
+          { required: true, message: '请输入密码', trigger: 'blur' },
           { min: 3, message: '长度大于三个字符', trigger: 'blur' }
         ]
       }
