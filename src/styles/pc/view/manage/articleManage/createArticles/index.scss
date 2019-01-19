@@ -1,0 +1,15 @@
+#createArticles{
+  padding: 20px 40px;
+  .createArticles_title{
+    margin-bottom: 20px;
+    width: calc(100% - 100px);
+    margin-right: 10px;
+  }
+  .createArticles_save{
+    font-size: 10px;
+    line-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    float: right;
+  }
+}
