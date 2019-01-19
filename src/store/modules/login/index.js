@@ -3,7 +3,7 @@ const user = {
   state: {
     token: null,
     userInfo: {},
-    loginStatus: true
+    loginStatus: false
   },
   getters: {
     token: state => state.token,
