@@ -3,16 +3,16 @@ node_js: node
 branches:
   only:
   - master
-# addons:
-#   ssh_known_hosts:
-#   - gz.oidiotlin.com
+addons:
+  ssh_known_hosts:
+  - 47.99.68.224
 install:
 - npm install npm -g
 - npm install --registry=https://registry.npm.taobao.org
 script:
 - npm run build:dev
-# after_success:
-# - cd ./dist
+after_success:
+- ssh root@47.99.68.224
 # - git init
 # - git config user.name "鹿丶羽"
 # - git config user.email "panyupy@vip.qq.com"
