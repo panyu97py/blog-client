@@ -56,10 +56,19 @@ service.interceptors.response.use(
    */
   error => {
     let message = error.response ? error.response.data.message : error.message
-    Notification.error({
-      title: '错误',
-      message: message
-    })
+    let status = error.response ? error.response.status : null
+    if (status === 500) {
+      Notification.error({
+        title: '错误',
+        message: '服务器内部错误'
+      })
+    } else {
+      Notification.error({
+        title: '错误',
+        message: message
+      })
+    }
+
     return Promise.reject(error)
   }
 )
