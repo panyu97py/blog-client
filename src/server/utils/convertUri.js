@@ -1,4 +1,5 @@
 var api = {}
+console.log('process.env.ENV', process.env.ENV)
 if (process.env.ENV === 'prod') {
   api = require('../config/api.prod').default
 } else {
