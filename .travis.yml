@@ -12,7 +12,8 @@ install:
 script:
 - npm run build:dev
 after_success:
-- ssh root@47.99.68.224
+# - ssh root@47.99.68.224
+# - scp -r dist/* root@47.99.68.224:/home/www/htdocs
 # - git init
 # - git config user.name "鹿丶羽"
 # - git config user.email "panyupy@vip.qq.com"
