@@ -18,6 +18,7 @@ after_success:
   -in deploy_rsa.enc -out deploy_rsa -d
 - chmod 600 deploy_rsa
 - eval "$(ssh-agent -s)"
-- ssh-add deploy_rsa
+- ssh-add
+# deploy_rsa
 - scp -r dist/* root@47.99.68.224:/home/www/htdocs
 # - rsync -az --delete ./dist/* root@47.99.68.224:/home/www/htdocs
