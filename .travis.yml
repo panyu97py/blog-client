@@ -18,5 +18,5 @@ after_success:
 - chmod 600 deploy_rsa
 - eval "$(ssh-agent -s)"
 - ssh-add deploy_rsa
-- rm -rf root@47.99.68.224:/home/www/htdocs/*
+- ssh root@47.99.68.224 'rm -rf /home/www/htdocs/*'
 - scp -r dist/* root@47.99.68.224:/home/www/htdocs
