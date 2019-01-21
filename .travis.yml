@@ -18,5 +18,5 @@ after_success:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
-- scp -r dist/* root@47.99.68.224:/home/www/htdocs
-# - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
+# - scp -r dist/* root@47.99.68.224:/home/www/htdocs
+- rsync -az --delete ./dist/* root@47.99.68.224:/home/www/htdocs
