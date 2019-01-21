@@ -16,4 +16,4 @@ script:
 - npm run build:dev
 after_success: 
 - scp -r dist/* root@47.99.68.224:/home/www/htdocs
-- rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
+# - rsync -az --delete ./dist/* travis@gz.oidiotlin.com:/var/www/mdzz-web/
