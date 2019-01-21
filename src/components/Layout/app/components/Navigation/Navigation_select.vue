@@ -30,6 +30,7 @@ export default {
     selectedOption: {
       deep: true,
       handler (selectedOption) {
+        this.SelectStatus_2 = false
         this.$emit('input', selectedOption)
       }
     }
