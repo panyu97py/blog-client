@@ -6,18 +6,17 @@ branches:
 addons:
   ssh_known_hosts:
   - 47.99.68.224
+before_install:
+- openssl aes-256-cbc -K $encrypted_c1dc1738b71d_key -iv $encrypted_c1dc1738b71d_iv
+  -in deploy_rsa.enc -out deploy_rsa -d
 install:
 - npm install npm -g
 - npm install
 script:
 - npm run build:prod
 after_success:
-- openssl aes-256-cbc -K $encrypted_c1dc1738b71d_key -iv $encrypted_c1dc1738b71d_iv
-  -in deploy_rsa.enc -out deploy_rsa -d
 - chmod 600 deploy_rsa
 - eval "$(ssh-agent -s)"
 - ssh-add deploy_rsa
 - scp -r dist/* root@47.99.68.224:/home/www/htdocs
-before_install:
-# - openssl aes-256-cbc -K $encrypted_c1dc1738b71d_key -iv $encrypted_c1dc1738b71d_iv
-#   -in deploy_rsa.enc -out deploy_rsa -d
+
