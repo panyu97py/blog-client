@@ -39,6 +39,9 @@ export default {
         type: 'success'
       })
     }
+  },
+  mounted () {
+    console.log(this.userInfo)
   }
 }
 </script>

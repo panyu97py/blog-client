@@ -1,6 +1,6 @@
 <template>
   <div id="login_layout">
-    <login :from="from"/>
+    <login :from="from" :to="to"/>
   </div>
 </template>
 <script>
@@ -12,13 +12,15 @@ export default {
   },
   data () {
     return {
-      from: null
+      from: null,
+      to: null
     }
   },
   beforeRouteEnter (to, from, next) {
     next((vm) => {
       // 参数vm就是当前组件的实例。
       vm.from = from.name
+      vm.to = to.name
     })
   }
 }

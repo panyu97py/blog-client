@@ -16,7 +16,7 @@
   </div>
 </template>
 <script>
-import {mapActions} from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   name: 'login',
   data () {
@@ -42,20 +42,40 @@ export default {
       type: String
     }
   },
+  computed: {
+    to () {
+      return this.$route.query.to
+    }
+  },
   methods: {
     ...mapActions(['login']),
     submit () {
-      this.$refs.loginForm.validate(async (valid) => {
+      this.$refs.loginForm.validate(async valid => {
         if (valid) {
-          let {username, password} = this.form
-          await this.login({username, password})
+          let { username, password } = this.form
+          await this.login({ username, password })
           // 若不存在 from 则跳转至博客前台页面
-          this.$router.push({name: this.from || 'app'})
+          this.$notify({
+            title: '成功',
+            message: '登录成功',
+            type: 'success'
+          })
+          this.$router.push({
+            name:
+              this.to && this.to !== 'login'
+                ? this.to
+                : this.from
+                  ? this.from
+                  : 'app'
+          })
         } else {
           return false
         }
       })
     }
+  },
+  mounted () {
+    console.log(this.$route.query.to)
   }
 }
 </script>

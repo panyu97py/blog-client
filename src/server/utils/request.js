@@ -15,15 +15,13 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     config.url = convertUri(config.url)
-    if (store.getters.token) { console.log(store.getters.token) }
+    let token = store.getters.token || null
     // 请求头带token
-    // if (
-    //   store.getters.accessToken &&
-    //   config.url.indexOf('check_token') === -1 &&
-    //   config.url.indexOf('/oauth/token') === -1
-    // ) {
-    //   config.headers['Authorization'] = 'Bearer ' + store.getters.accessToken // 让每个请求携带自定义token 请根据实际情况自行修改
-    // }
+    if (
+      token
+    ) {
+      config.headers['Authorization'] = 'Bearer ' + token // 让每个请求携带自定义token 请根据实际情况自行修改
+    }
     return config
   },
   error => {

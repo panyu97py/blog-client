@@ -26,7 +26,7 @@ router.beforeEach((to, from, next) => {
       title: '错误',
       message: '您还没有登录'
     })
-    next({name: 'login'})
+    next({name: 'login', query: {to: to.name}})
   }
 })
 export default router

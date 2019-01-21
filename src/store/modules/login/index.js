@@ -22,12 +22,14 @@ const user = {
     }
   },
   actions: {
-    async login ({commit, action}, {username, password}) {
-      let res = await api.login(username, password)
-      commit('SET_TOKEN', res)
-      commit('CHANGE_LOGIN_STATUS', true)
-      action('gerUserInfo')
-      return res
+    async login ({commit, dispatch}, {username, password}) {
+      return new Promise(async (resolve, reject) => {
+        let res = await api.login(username, password)
+        commit('SET_TOKEN', res)
+        commit('CHANGE_LOGIN_STATUS', true)
+        dispatch('gerUserInfo')
+        resolve()
+      })
     },
     async gerUserInfo ({commit}) {
       let userInfo = await api.getUserInfo()

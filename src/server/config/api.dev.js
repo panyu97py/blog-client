@@ -1,4 +1,5 @@
-const url = 'http://localhost:3000'
+// const url = 'http://localhost:3000'
+const url = 'http://47.99.68.224:3000'
 
 // 服务器链接配置
 export default {
