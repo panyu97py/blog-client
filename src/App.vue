@@ -23,6 +23,11 @@ export default {
       if (this.token) {
         this.SET_TOKEN(this.token)
         await this.gerUserInfo()
+        this.$notify({
+          title: '成功',
+          message: '自动登录成功',
+          type: 'success'
+        })
       }
     }
   },
