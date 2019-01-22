@@ -19,4 +19,4 @@ after_success:
 - eval "$(ssh-agent -s)"
 - ssh-add deploy_rsa
 - ssh root@47.99.68.224 'rm -rf /home/www/htdocs/*'
-- scp -r-v dist/* root@47.99.68.224:/home/www/htdocs
+- scp -v -r dist/* root@47.99.68.224:/home/www/htdocs
