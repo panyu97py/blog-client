@@ -23,7 +23,6 @@ export default {
       if (this.token) {
         this.SET_TOKEN(this.token)
         await this.gerUserInfo()
-        this.loginSuccess()
       }
     }
   },
