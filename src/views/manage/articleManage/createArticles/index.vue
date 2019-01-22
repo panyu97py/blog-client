@@ -16,7 +16,7 @@ export default {
   components: { Tinymce },
   computed: {
     ...mapGetters(['userInfo']),
-    userId: () => {
+    userId () {
       return this.userInfo.user_id
     }
   },

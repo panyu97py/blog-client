@@ -1,20 +1,20 @@
 <template>
   <div id="articleList">
     <Article
-      v-for=" article in articleList"
+      v-for=" article in articleListByPage.data"
       :key="article.article_id"
       :article="article"
       @clickTitle="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
       @openTheFull="$router.push({name:'articleDetails',query:{article_id:article.article_id}})"
       @clickLabel="(label)=>{$router.push({name:'articleSketch',query:{label_id:label.label_id}})}"
     />
-    <Pagination v-model="currentPage" :totalPage="10"/>
+    <Pagination v-model="currentPage" :totalPage="articleListByPage.totalPage"/>
   </div>
 </template>
 <script>
 import Article from '@/components/article/overview'
 import Pagination from '@/components/Pagination'
-import {mapGetters, mapActions} from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'articleList',
   data () {
@@ -28,7 +28,10 @@ export default {
     Pagination
   },
   computed: {
-    ...mapGetters(['articleList'])
+    ...mapGetters(['articleList']),
+    articleListByPage () {
+      return this.$utils.pagination(this.articleList, this.currentPage, 5)
+    }
   },
   methods: {
     ...mapActions(['getArticleList'])
