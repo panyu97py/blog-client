@@ -26,6 +26,7 @@ const user = {
       return new Promise(async (resolve, reject) => {
         let res = await api.login(username, password)
         commit('SET_TOKEN', res)
+        localStorage.setItem('token', res)
         commit('CHANGE_LOGIN_STATUS', true)
         dispatch('gerUserInfo')
         resolve()
@@ -33,6 +34,7 @@ const user = {
     },
     async gerUserInfo ({commit}) {
       let userInfo = await api.getUserInfo()
+      commit('CHANGE_LOGIN_STATUS', true)
       commit('SET_USERINFO', userInfo)
     },
     loginOut ({commit}) {

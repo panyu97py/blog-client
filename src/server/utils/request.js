@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Notification } from 'element-ui'
 import store from '@/store'
 import convertUri from './convertUri'
-// import router from '@/router'
+import router from '@/router'
 
 // 创建axios实例
 const service = axios.create({
@@ -17,9 +17,7 @@ service.interceptors.request.use(
     config.url = convertUri(config.url)
     let token = store.getters.token || null
     // 请求头带token
-    if (
-      token
-    ) {
+    if (token) {
       config.headers['Authorization'] = 'Bearer ' + token // 让每个请求携带自定义token 请根据实际情况自行修改
     }
     return config
@@ -60,6 +58,15 @@ service.interceptors.response.use(
         title: '错误',
         message: '服务器内部错误'
       })
+    } else if (
+      status === 401 &&
+      !/\/user\/token$/.test(error.response.config.url)// 正则判断访问的接口不为 /user/token
+    ) {
+      Notification.error({
+        title: '错误',
+        message: '登陆已过期，请重新登陆'
+      })
+      router.push({ name: 'login' })
     } else {
       Notification.error({
         title: '错误',
