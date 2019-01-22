@@ -56,10 +56,10 @@ export default {
   computed: {
     to () {
       return this.$route.query.to
-    },
-    token () {
-      return localStorage.getItem('token') || null
     }
+    // token () {
+    //   return localStorage.getItem('token') || null
+    // }
   },
   methods: {
     ...mapActions(['login', 'gerUserInfo']),
@@ -82,13 +82,13 @@ export default {
     /**
      * 校验localStorage中的token若有效则免密登陆
      */
-    async loginByToken () {
-      if (this.token) {
-        this.SET_TOKEN(this.token)
-        await this.gerUserInfo()
-        this.loginSuccess()
-      }
-    },
+    // async loginByToken () {
+    //   if (this.token) {
+    //     this.SET_TOKEN(this.token)
+    //     await this.gerUserInfo()
+    //     this.loginSuccess()
+    //   }
+    // },
     /**
      * 登陆成功后的提示与跳转
      */
@@ -107,9 +107,9 @@ export default {
                   : 'app'
       })
     }
-  },
-  mounted () {
-    this.loginByToken()
   }
+  // mounted () {
+  //   this.loginByToken()
+  // }
 }
 </script>
