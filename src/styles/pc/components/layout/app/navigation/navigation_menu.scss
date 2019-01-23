@@ -3,6 +3,10 @@
   .Navigation_menu_item{
     margin: 10px;
     list-style: none;
+    &_content{
+      font-size: 15px;
+      line-height: 20px;
+    }
     &_content:hover{
       border-radius: 2px;
       padding: 5px 10px;

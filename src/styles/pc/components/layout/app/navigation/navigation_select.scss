@@ -28,13 +28,14 @@
   }
   .selectOption {
     position: absolute;
-    width: 30%;
+    font-size: 10px;
+    width: 25%;
     z-index: 1;
     border-radius: 5px;
     background: black;
     color: white;
     margin: auto;
-    top: 4vw;
+    top: 3vw;
     left: 0;
     right: 0;
     p {

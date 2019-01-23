@@ -10,16 +10,16 @@
 
 <script>
 import Tinymce from '@/components/Tinymce'
-import {mapGetters} from 'vuex'
+// import {mapGetters} from 'vuex'
 export default {
   name: 'TinymceDemo',
   components: { Tinymce },
-  computed: {
-    ...mapGetters(['userInfo']),
-    userId () {
-      return this.userInfo.user_id
-    }
-  },
+  // computed: {
+  //   ...mapGetters(['userInfo']),
+  //   userId () {
+  //     return this.userInfo.user_id
+  //   }
+  // },
   data () {
     return {
       form: {
@@ -32,7 +32,7 @@ export default {
   methods: {
     async saveArticles () {
       let {articleTitle, articleContent} = this.form
-      await this.$api.addArticle(this.userId, articleTitle, articleContent)
+      await this.$api.addArticle(articleTitle, articleContent)
       this.$notify({
         title: '成功',
         message: '保存成功',

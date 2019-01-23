@@ -5,10 +5,11 @@
       <img :src="imgSrc" alt class="headImg">
       <p v-if="loginStatus">{{name}}</p>
       <p  v-else><span @click="$router.push({name:'login'})" class="Navigation_login">登录</span>/<span class="Navigation_register">注册</span></p>
-      <p>--路漫漫其修远兮--</p>
+      <p>--js无所不能--</p>
       <NavigationSelect v-model="model"/>
       <NavigationMenu v-if="model==='menu'"/>
       <NavigationLabelList v-else-if="model==='tag'"/>
+      <NavigationAboutMe v-else/>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@
 import NavigationMenu from './Navigation_menu'
 import NavigationLabelList from './Navigation_label_list'
 import NavigationSelect from './Navigation_select'
+import NavigationAboutMe from './Navigation_about_me'
 import {mapGetters} from 'vuex'
 export default {
   name: 'Navigation',
@@ -32,7 +34,8 @@ export default {
   components: {
     NavigationSelect,
     NavigationMenu,
-    NavigationLabelList
+    NavigationLabelList,
+    NavigationAboutMe
   }
 }
 </script>

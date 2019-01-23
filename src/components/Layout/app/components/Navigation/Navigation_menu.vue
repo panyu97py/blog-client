@@ -1,9 +1,18 @@
 <template>
   <div>
     <ul class="Navigation_menu_list">
-      <li class="Navigation_menu_item" v-for="(item,index) in menuList" :key="index">
-        <span class="Navigation_menu_item_content" @click="routerTo(item.name)">{{item.label}}</span>
-      </li>
+      <template v-for="(item,index) in menuList">
+        <li
+          class="Navigation_menu_item"
+          v-if="!item.meta.requireLogin||(item.meta.requireLogin&&loginStatus)"
+          :key="index"
+        >
+          <span
+            class="Navigation_menu_item_content"
+            @click="routerTo(item.name)"
+          >{{item.meta.title}}</span>
+        </li>
+      </template>
     </ul>
     <div class="Navigation_icon_list">
       <a href="https://github.com/panyu97py" class="Navigation_github_icon">
@@ -13,6 +22,7 @@
   </div>
 </template>
 <script>
+import { mapGetters } from 'vuex'
 export default {
   name: 'Navigation_menu',
   data () {
@@ -21,6 +31,7 @@ export default {
     }
   },
   computed: {
+    ...mapGetters(['loginStatus']),
     routerMap () {
       return this.$router.options.routes
     },
@@ -53,8 +64,8 @@ export default {
               (!item.rootModule && item.name !== 'app'))
           ) {
             let name = item.name
-            let label = item.meta.title
-            menuList.push({ name, label })
+            let meta = item.meta
+            menuList.push({ name, meta })
           }
         })
       }

@@ -2,11 +2,13 @@
   <div id="Navigation_select">
     <div class="switch_icon" @mouseenter="SelectStatus_1=true" @mouseleave="closeOption">
        <svg-icon icon-class="menu" class="switch_icon_svg" v-if="selectedOption==='menu'"/>
-       <svg-icon icon-class="tag" class="switch_icon_svg" v-if="selectedOption==='tag'"/>
+       <svg-icon icon-class="tag" class="switch_icon_svg" v-else-if="selectedOption==='tag'"/>
+       <svg-icon icon-class="info" class="switch_icon_svg" v-else-if="selectedOption==='about'"/>
     </div>
       <div class="selectOption" @mouseenter="SelectStatus_2=true" v-if="SelectStatus_1||SelectStatus_2" @mouseleave="SelectStatus_2=false">
         <p @click="selectedOption='menu'">菜单</p>
         <p @click="selectedOption='tag'">标签</p>
+        <p @click="selectedOption='about'">关于本站</p>
       </div>
   </div>
 </template>

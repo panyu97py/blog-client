@@ -1,6 +1,6 @@
 <template>
   <div id="article_overview_footer">
-    <svg-icon icon-class="tag" class="article_overview_tag_icon"/>
+    <svg-icon icon-class="tag" class="article_overview_tag_icon" v-if="labels.length>0"/>
     <articleLabelList>
       <articlelabel v-for="label in labels" :key="label.label_id" :labelName="label.label_name" @click="$emit('clickLabel',label)"/>
     </articleLabelList>

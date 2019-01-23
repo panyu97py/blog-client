@@ -7,6 +7,11 @@ Vue.use(Router)
 const router = new Router({
   routes: routerMap
 })
+/**
+ * 判断用户是否有权限进入 to 路由
+ * @param {*} store vuex store
+ * @param {*} to 前往的路由
+ */
 const getAccessAuthority = (store, to) => {
   let requireLogin = to.meta
     ? to.meta.requireLogin
@@ -15,16 +20,17 @@ const getAccessAuthority = (store, to) => {
     : false
   let loginStatus = store.getters.loginStatus
   let accessAuthority = requireLogin ? loginStatus : true
-  return {accessAuthority}
+  let message = loginStatus ? '' : '您还没有登陆'
+  return {accessAuthority, message}
 }
 router.beforeEach((to, from, next) => {
-  let {accessAuthority} = getAccessAuthority(store, to)
+  let {accessAuthority, message} = getAccessAuthority(store, to)
   if (accessAuthority) {
     next()
   } else {
     Notification.error({
       title: '错误',
-      message: '您还没有登录'
+      message: message
     })
     next({name: 'login', query: {to: to.name}})
   }

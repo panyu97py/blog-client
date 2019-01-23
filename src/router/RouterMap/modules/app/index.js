@@ -13,7 +13,7 @@ export default [
         rootModule: 'app',
         name: 'app_overview',
         component: () => import('@/views/app/overview'),
-        meta: { title: '首页', requireLogin: false, authorizedRoles: [] }
+        meta: { title: '博客主页', requireLogin: false, authorizedRoles: [] }
       },
       {
         path: 'articleDetails',

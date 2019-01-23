@@ -1,7 +1,7 @@
 <template>
   <div id="articleSketch">
-    <ArticleSketch v-for="article in arricleList" :key="article.article_id" :article="article"/>
-    <Pagination v-model="currentPage" :totalPage="totalPage"/>
+    <ArticleSketch v-for="article in articleListByPage.data" :key="article.article_id" :article="article"/>
+    <Pagination v-model="currentPage" :totalPage="articleListByPage.totalPage"/>
   </div>
 </template>
 <script>
@@ -12,9 +12,8 @@ export default {
   name: 'articleSketch',
   data () {
     return {
-      currentPage: 10,
-      totalPage: 10,
-      arricleList: []
+      currentPage: 1,
+      articleList: []
     }
   },
   components: {
@@ -24,6 +23,9 @@ export default {
   computed: {
     label_id () {
       return this.$route.query.label_id
+    },
+    articleListByPage () {
+      return this.$utils.pagination(this.articleList, this.currentPage, 5)
     }
   },
   watch: {
@@ -36,7 +38,7 @@ export default {
   },
   methods: {
     async getArticleList (labelId) {
-      this.arricleList = await this.$api.getArticle({ labelId })
+      this.articleList = await this.$api.getArticle({ labelId })
     }
   },
   mounted () {
