@@ -20,6 +20,9 @@
   </div>
 </template>
 <script>
+/**
+ * 仿支付宝密码输入框
+ */
 export default {
   name: 'ElimPasswordInput',
   data () {
