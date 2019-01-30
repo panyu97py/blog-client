@@ -15,6 +15,12 @@ const router = new Router({
 const getAccessAuthority = async (store, to) => {
   let token = localStorage.getItem('token') || null
   let loginStatus = store.getters.loginStatus
+
+  /**
+   * 若 token存在
+   * 且用户未登陆
+   * 则校验token 发起免密登陆
+   */
   if (token && !loginStatus) {
     store.commit('SET_TOKEN', token)
     await store.dispatch('gerUserInfo')
