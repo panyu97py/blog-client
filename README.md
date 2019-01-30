@@ -1,5 +1,5 @@
 # [blog-client](http://47.99.68.224)
-> A Vue.js project
+> 我的博客客户端 欢迎 issues 交流
 ## [![Build Status](https://www.travis-ci.org/panyu97py/blog-client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog-client)
 
 ## Build Setup

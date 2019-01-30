@@ -13,6 +13,10 @@
   z-index: 1001;
   @include No-Scrollbar;
   @include reset-element-ui-css;
+  // .sidebar_icon{
+  //   // color: white;
+  //   font-size: 15px;
+  // }
 }
 .Navigation_sidebar_collapse {
   width: $sidebar_collapse_width;
