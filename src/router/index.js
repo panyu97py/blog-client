@@ -12,19 +12,31 @@ const router = new Router({
  * @param {*} store vuex store
  * @param {*} to 前往的路由
  */
-const getAccessAuthority = (store, to) => {
-  let requireLogin = to.meta
-    ? to.meta.requireLogin
-      ? to.meta.requireLogin
-      : false
-    : false
+const getAccessAuthority = async (store, to) => {
+  let token = localStorage.getItem('token') || null
   let loginStatus = store.getters.loginStatus
-  let accessAuthority = requireLogin ? loginStatus : true
-  let message = loginStatus ? '' : '您还没有登陆'
-  return {accessAuthority, message}
+  if (token && !loginStatus) {
+    store.commit('SET_TOKEN', token)
+    await store.dispatch('gerUserInfo')
+    Notification({
+      title: '成功',
+      message: '自动登录成功',
+      type: 'success'
+    })
+    return {accessAuthority: true}
+  } else {
+    let requireLogin = to.meta
+      ? to.meta.requireLogin
+        ? to.meta.requireLogin
+        : false
+      : false
+    let accessAuthority = requireLogin ? loginStatus : true
+    let message = loginStatus ? '' : '您还没有登陆'
+    return {accessAuthority, message}
+  }
 }
-router.beforeEach((to, from, next) => {
-  let {accessAuthority, message} = getAccessAuthority(store, to)
+router.beforeEach(async (to, from, next) => {
+  let {accessAuthority, message} = await getAccessAuthority(store, to)
   if (accessAuthority) {
     next()
   } else {
