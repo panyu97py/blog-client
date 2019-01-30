@@ -66,6 +66,7 @@ service.interceptors.response.use(
         title: '错误',
         message: '登陆已过期，请重新登陆'
       })
+      localStorage.removeItem('token')
       router.push({ name: 'login' })
     } else {
       Notification.error({
