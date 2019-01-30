@@ -8,7 +8,7 @@
           :key="manageModule.name"
         >
           <template slot="title" v-if="item.meta">
-            <svg-icon :icon-class="manageModule.meta.icon" v-if="manageModule.meta.icon"/>
+            <svg-icon :icon-class="manageModule.meta.icon" v-if="manageModule.meta.icon" class="sidebar_icon"/>
             <span slot="title">{{manageModule.meta.title}}</span>
           </template>
           <SlidebarItem :item="manageModule" :key="manageModule.name"/>
@@ -19,14 +19,14 @@
           :key="manageModule.name"
           :route="{name:manageModule.name}"
         >
-          <svg-icon :icon-class="manageModule.meta.icon" v-if="manageModule.meta.icon"/>
+          <svg-icon :icon-class="manageModule.meta.icon" v-if="manageModule.meta.icon" class="sidebar_icon"/>
           <span slot="title">{{manageModule.meta.title}}</span>
         </el-menu-item>
       </template>
     </template>
     <template v-else>
       <el-menu-item :index="item.path" :route="{name:item.name}" v-if="item.meta">
-        <svg-icon :icon-class="item.meta.icon" v-if="item.meta.icon"/>
+        <svg-icon :icon-class="item.meta.icon" v-if="item.meta.icon" class="sidebar_icon"/>
         <span slot="title">{{item.meta.title}}</span>
       </el-menu-item>
     </template>
