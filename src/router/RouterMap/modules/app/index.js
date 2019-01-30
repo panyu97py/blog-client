@@ -6,7 +6,7 @@ export default [
     redirect: '/app/overview',
     component: appLayout,
     hidden: false,
-    meta: { title: '博客前台', icon: 'collection', requireLogin: false, authorizedRoles: [] },
+    meta: { title: '博客前台', icon: 'foregroundScreen', requireLogin: false, authorizedRoles: [] },
     children: [
       {
         path: 'overview',

@@ -20,8 +20,8 @@ export default [
         rootModule: 'manage',
         component: () => import('@/views/manage/overview'),
         meta: {
-          title: '首页',
-          icon: 'collection',
+          title: '概览',
+          icon: 'overview',
           requireLogin: true,
           authorizedRoles: []
         }
@@ -34,7 +34,7 @@ export default [
         component: routerView,
         meta: {
           title: '博文管理',
-          icon: 'collection',
+          icon: 'article',
           requireLogin: true,
           authorizedRoles: []
         },
@@ -47,7 +47,7 @@ export default [
               import('@/views/manage/articleManage/createArticles'),
             meta: {
               title: '创建文章',
-              icon: 'collection',
+              icon: 'edit',
               requireLogin: true,
               authorizedRoles: []
             }
