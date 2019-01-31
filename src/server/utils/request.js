@@ -4,7 +4,7 @@ import { Notification } from 'element-ui'
 import store from '@/store'
 import convertUri from './convertUri'
 import router from '@/router'
-
+import oauthJudge from './oauthJudge'
 // 创建axios实例
 const service = axios.create({
   // baseURL: process.env.BASE_API, // api的base_url
@@ -17,7 +17,7 @@ service.interceptors.request.use(
     config.url = convertUri(config.url)
     let token = store.getters.token || null
     // 请求头带token
-    if (token) {
+    if (token && oauthJudge()) {
       config.headers['Authorization'] = 'Bearer ' + token // 让每个请求携带自定义token 请根据实际情况自行修改
     }
     return config
