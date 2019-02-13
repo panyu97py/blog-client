@@ -51,6 +51,18 @@ export default [
               requireLogin: true,
               authorizedRoles: []
             }
+          }, {
+            path: 'preview',
+            rootModule: 'manage',
+            name: 'previewArticles',
+            component: () =>
+              import('@/views/manage/articleManage/previewArticles'),
+            meta: {
+              title: '文章列表',
+              icon: 'list',
+              requireLogin: true,
+              authorizedRoles: []
+            }
           }
         ]
       }

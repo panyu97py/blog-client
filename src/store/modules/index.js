@@ -1,7 +1,7 @@
 import login from './login'
-import article from './article'
+import app from './app'
 const modules = {
   login,
-  article
+  app
 }
 export default modules

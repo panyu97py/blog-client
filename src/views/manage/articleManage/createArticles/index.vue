@@ -14,12 +14,6 @@ import Tinymce from '@/components/Tinymce'
 export default {
   name: 'TinymceDemo',
   components: { Tinymce },
-  // computed: {
-  //   ...mapGetters(['userInfo']),
-  //   userId () {
-  //     return this.userInfo.user_id
-  //   }
-  // },
   data () {
     return {
       form: {
@@ -39,9 +33,6 @@ export default {
         type: 'success'
       })
     }
-  },
-  mounted () {
-    console.log(this.userInfo)
   }
 }
 </script>
