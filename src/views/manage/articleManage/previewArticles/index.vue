@@ -1,24 +1,31 @@
 <template>
   <div id="previewArticles">文章列表
     <articleTable
-      :data="[{
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
-        }]"
+      :data="tableData"
     />
   </div>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex'
 import articleTable from './components/articleTable'
 export default {
   components: {
     articleTable
   },
+  computed: {
+    ...mapGetters(['articleList'])
+  },
   asyncComputed: {
     async tableData () {
-
+      let data = this.articleList.length === 0 ? await this.getArticleList() : this.articleList
+      return data
     }
+  },
+  methods: {
+    ...mapActions(['getArticleList'])
+  },
+  mounted () {
+    this.getArticleList()
   }
 }
 </script>
