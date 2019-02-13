@@ -1,8 +1,6 @@
 <template>
   <div id="previewArticles">文章列表
-    <articleTable
-      :data="tableData"
-    />
+    <articleTable :data="tableData"/>
   </div>
 </template>
 <script>
@@ -17,7 +15,10 @@ export default {
   },
   asyncComputed: {
     async tableData () {
-      let data = this.articleList.length === 0 ? await this.getArticleList() : this.articleList
+      let data =
+        this.articleList.length === 0
+          ? await this.getArticleList()
+          : this.articleList
       return data
     }
   },

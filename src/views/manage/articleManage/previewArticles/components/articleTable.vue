@@ -27,9 +27,7 @@ export default {
       console.log(row)
     },
     getTime (date) {
-      let { year, month, day, hour, minutes } = this.$utils.timeConversion(
-        date
-      )
+      let { year, month, day, hour, minutes } = this.$utils.timeConversion(date)
       return year + '-' + month + '-' + day + ' ' + hour + ':' + minutes
     }
   },
