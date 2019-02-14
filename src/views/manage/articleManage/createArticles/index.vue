@@ -12,7 +12,6 @@
 import Tinymce from '@/components/Tinymce'
 // import {mapGetters} from 'vuex'
 export default {
-  name: 'TinymceDemo',
   components: { Tinymce },
   data () {
     return {
