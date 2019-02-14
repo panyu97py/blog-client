@@ -3,11 +3,14 @@
   margin: 0;
   cursor: pointer;
   right: 15px;
-  padding: 1px 1px 3px 2px;
-  color: $font_color;
-  background: #00000086;
+  padding: 1px 2px 3px 2px;
+  // color: $font_color;
+  // background: #00000086;
+  color:white;
+  background: $blue;
   bottom: 8%;
-  font-size: 15px;
+  text-align: center;
+  font-size: 13px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
