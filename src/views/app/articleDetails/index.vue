@@ -5,9 +5,11 @@
       v-if="article"
       @clickLabel="(label)=>{$router.push({name:'articleSketch',query:{label_id:label.label_id}})}"
     />
+    <scrollTop el="#articleDetails"/>
   </div>
 </template>
 <script>
+import scrollTop from '@/components/scrollTop'
 import Article from '@/components/article/details'
 import Pagination from '@/components/Pagination'
 import { mapGetters, mapActions } from 'vuex'
@@ -45,7 +47,8 @@ export default {
   },
   components: {
     Article,
-    Pagination
+    Pagination,
+    scrollTop
   }
 }
 </script>

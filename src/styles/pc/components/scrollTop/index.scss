@@ -1,0 +1,11 @@
+.toTop {
+  position: absolute;
+  cursor: pointer;
+  right: 15px;
+  padding: 1px 1px 3px 1px;
+  background: $yellow;
+  bottom: 10%;
+  font-size: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
