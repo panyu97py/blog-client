@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="data" stripe class="table" header-cell-class-name="tableHead">
+  <el-table :data="data" stripe  header-cell-class-name="tableHead">
     <slot/>
   </el-table>
 </template>
