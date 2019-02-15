@@ -1,5 +1,5 @@
 <template>
-  <el-table :data="data" stripe class="articleTable" row-class-name="articleTable_column">
+  <articleTable :data="data">
     <el-table-column type="index" align="center"></el-table-column>
     <el-table-column prop="article_title" label="标题" align="center"></el-table-column>
     <el-table-column label="作者" align="center">
@@ -18,11 +18,15 @@
         <el-button type="text" size="small">编辑</el-button>
       </template>
     </el-table-column>
-  </el-table>
+  </articleTable>
 </template>
 
 <script>
+import articleTable from '@/components/table'
 export default {
+  components: {
+    articleTable
+  },
   methods: {
     handleClick (row) {
       console.log(row)
