@@ -5,6 +5,7 @@
     :pager-count="pagerCount"
     :page-count="totalPage"
     :current-page="currentPage"
+    @current-change="(page)=>{currentPage=page}"
   ></el-pagination>
 </template>
 <script>
@@ -12,6 +13,14 @@ export default {
   data () {
     return {
       currentPage: 0
+    }
+  },
+  watch: {
+    currentPage: {
+      deep: true,
+      handler (currentPage) {
+        this.$emit('input', currentPage)
+      }
     }
   },
   props: {

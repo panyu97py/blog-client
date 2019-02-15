@@ -16,21 +16,13 @@ export default {
   computed: {
     ...mapGetters(['articleList']),
     articleListByPage () {
-      return this.$utils.pagination(this.articleList, this.currentPage, 5)
+      return this.$utils.pagination(this.articleList, this.currentPage, 2)
     }
   },
   data () {
     return {
       // 当前页码
       currentPage: 1
-    }
-  },
-  watch: {
-    currentPage: {
-      deep: true,
-      handler (currentPage) {
-        this.$emit('input', currentPage)
-      }
     }
   },
   // asyncComputed: {
