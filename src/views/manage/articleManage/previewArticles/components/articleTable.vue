@@ -1,6 +1,6 @@
 <template>
   <articleTable :data="data">
-    <el-table-column type="index" align="center"></el-table-column>
+    <el-table-column prop="article_serial_number" label="#" align="center"></el-table-column>
     <el-table-column prop="article_title" label="标题" align="center"></el-table-column>
     <el-table-column label="作者" align="center">
       <template slot-scope="scope">
