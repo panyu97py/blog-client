@@ -2,7 +2,7 @@
   <div id="elimUpload">
     <label class="title">上传中标合同：</label>
     <el-upload
-      action="123123"
+      action="https://httpbin.org/post"
       :http-request="uploadFileMethod"
       list-type="picture-card"
       :on-preview="handlePictureCardPreview"
@@ -61,7 +61,7 @@ export default {
       const formData = new FormData()
       formData.append('uploadFile', fileObject)
       /**
-       * @todo  此处接口还未更改
+       * @todo  此处接口还未更改 https://httpbin.org/post
        */
       let res = await this.$api.uploadFiles(formData)
       console.log(res)
