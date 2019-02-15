@@ -71,14 +71,17 @@ export default {
 
   },
   props: {
+    // 总页数
     totalPage: {
       type: Number,
       required: true
     },
+    // 当前页码
     value: {
       type: Number,
       required: true
     },
+    // 显示页码数
     pagerCount: {
       type: Number,
       default: () => 5

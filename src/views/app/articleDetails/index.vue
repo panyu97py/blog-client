@@ -11,7 +11,6 @@
 <script>
 import scrollTop from '@/components/scrollTop'
 import Article from '@/components/article/details'
-import Pagination from '@/components/Pagination/app'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'articleList',
@@ -47,7 +46,6 @@ export default {
   },
   components: {
     Article,
-    Pagination,
     scrollTop
   }
 }
