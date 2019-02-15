@@ -39,13 +39,10 @@ export default {
     async getTableData () {
       if (this.articleList.length === 0) {
         await this.getArticleList()
-        console.log(this.articleList)
-        console.log(this.articleListByPage)
       }
     }
   },
   mounted () {
-    // this.getArticleList()
     this.getTableData()
   }
 }
