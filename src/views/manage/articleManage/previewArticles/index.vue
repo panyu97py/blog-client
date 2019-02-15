@@ -16,7 +16,7 @@ export default {
   computed: {
     ...mapGetters(['articleList']),
     articleListByPage () {
-      return this.$utils.pagination(this.articleList, this.currentPage, 2)
+      return this.$utils.pagination(this.articleList, this.currentPage, 10)
     }
   },
   data () {
