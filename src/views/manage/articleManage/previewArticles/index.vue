@@ -1,5 +1,5 @@
 <template>
-  <div id="previewArticles">文章列表
+  <div id="previewArticles">
     <articleTable :data="tableData"/>
   </div>
 </template>

@@ -13,7 +13,7 @@
 </template>
 <script>
 import Article from '@/components/article/overview'
-import Pagination from '@/components/Pagination'
+import Pagination from '@/components/Pagination/app'
 import { mapGetters, mapActions } from 'vuex'
 export default {
   name: 'articleList',

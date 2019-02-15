@@ -6,7 +6,7 @@
 </template>
 <script>
 import ArticleSketch from '@/components/article/sketch'
-import Pagination from '@/components/Pagination'
+import Pagination from '@/components/Pagination/app'
 
 export default {
   name: 'articleSketch',
