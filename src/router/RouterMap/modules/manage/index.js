@@ -39,6 +39,30 @@ export default [
         }
       },
       {
+        path: 'userManage',
+        name: 'userManage',
+        rootModule: 'manage',
+        component: () => import('@/views/manage/userManage'),
+        meta: {
+          title: '用户管理',
+          icon: 'personal',
+          requireLogin: true,
+          authorizedRoles: []
+        }
+      },
+      {
+        path: 'labelManage',
+        name: 'labelManage',
+        rootModule: 'manage',
+        component: () => import('@/views/manage/labelManage'),
+        meta: {
+          title: '标签管理',
+          icon: 'label_manage',
+          requireLogin: true,
+          authorizedRoles: []
+        }
+      },
+      {
         path: 'articles',
         rootModule: 'manage',
         name: 'articles',
