@@ -9,6 +9,8 @@
   color: white;
   text-align: center;
   position: relative;
+  cursor: default;
+  @include none-select;
   .Navigation_mask {
     width: 100%;
     height: 100%;
