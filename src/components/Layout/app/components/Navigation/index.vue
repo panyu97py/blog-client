@@ -3,7 +3,7 @@
     <div class="Navigation_mask"/>
     <div class="Navigation_content">
       <img :src="imgSrc" alt class="headImg">
-      <p v-if="loginStatus">{{name}}</p>
+      <p v-if="loginStatus">{{userInfo.user_nickname||userInfo.user_name}}</p>
       <p  v-else><span @click="$router.push({name:'login'})" class="Navigation_login">登录</span>/<span class="Navigation_register">注册</span></p>
       <p>--js无所不能--</p>
       <NavigationSelect v-model="model"/>
@@ -24,12 +24,11 @@ export default {
   data () {
     return {
       imgSrc: '/static/img/Layout/Navigation/User head.JPG',
-      name: '鹿丶羽',
       model: 'menu'
     }
   },
   computed: {
-    ...mapGetters(['loginStatus'])
+    ...mapGetters(['loginStatus', 'userInfo'])
   },
   components: {
     NavigationSelect,
