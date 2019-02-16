@@ -3,7 +3,8 @@
     <div class="Navigation_mask"/>
     <div class="Navigation_content">
       <img :src="imgSrc" alt class="headImg">
-      <p v-if="loginStatus">{{userInfo.user_nickname||userInfo.user_name}}</p>
+      <p v-if="loginStatus&&mouse==='leave'" @mouseover="mouse='over'" @mouseleave="mouse='leave'">{{userInfo.user_nickname||userInfo.user_name}}</p>
+      <p v-else-if="loginStatus&&mouse==='over'" @mouseover="mouse='over'" @mouseleave="mouse='leave'" @click="loginOut">退出登录</p>
       <p  v-else><span @click="login" class="Navigation_login">登录</span>/<span class="Navigation_register" @click="register">注册</span></p>
       <p>--js无所不能--</p>
       <NavigationSelect v-model="model"/>
@@ -18,19 +19,21 @@ import NavigationMenu from './Navigation_menu'
 import NavigationLabelList from './Navigation_label_list'
 import NavigationSelect from './Navigation_select'
 import NavigationAboutMe from './Navigation_about_me'
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
 export default {
   name: 'Navigation',
   data () {
     return {
       imgSrc: '/static/img/Layout/Navigation/User head.JPG',
-      model: 'menu'
+      model: 'menu',
+      mouse: 'leave'
     }
   },
   computed: {
     ...mapGetters(['loginStatus', 'userInfo'])
   },
   methods: {
+    ...mapActions(['loginOut']),
     register () {
       this.$notify({
         title: '警告',
@@ -40,6 +43,9 @@ export default {
     },
     login () {
       this.$router.push({name: 'login'})
+    },
+    mouseover () {
+      console.log('mouseover')
     }
   },
   components: {
