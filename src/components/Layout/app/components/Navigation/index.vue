@@ -4,7 +4,7 @@
     <div class="Navigation_content">
       <img :src="imgSrc" alt class="headImg">
       <p v-if="loginStatus">{{userInfo.user_nickname||userInfo.user_name}}</p>
-      <p  v-else><span @click="$router.push({name:'login'})" class="Navigation_login">登录</span>/<span class="Navigation_register">注册</span></p>
+      <p  v-else><span @click="login" class="Navigation_login">登录</span>/<span class="Navigation_register" @click="register">注册</span></p>
       <p>--js无所不能--</p>
       <NavigationSelect v-model="model"/>
       <NavigationMenu v-if="model==='menu'"/>
@@ -29,6 +29,18 @@ export default {
   },
   computed: {
     ...mapGetters(['loginStatus', 'userInfo'])
+  },
+  methods: {
+    register () {
+      this.$notify({
+        title: '警告',
+        message: '注册功能暂未开通',
+        type: 'warning'
+      })
+    },
+    login () {
+      this.$router.push({name: 'login'})
+    }
   },
   components: {
     NavigationSelect,

@@ -1,21 +1,43 @@
-.Navigation_navbar{
+.Navigation_navbar {
   background: white;
   height: $navbar_height;
-  .manage_menu,.manage_menu_collapse{
+  .manage_menu,
+  .manage_menu_collapse {
     cursor: pointer;
-    $icon_size:20px;
+    $icon_size: 20px;
     font-size: $icon_size;
     padding: ($navbar_height - $icon_size) / 2;
-    transform:rotate(0deg);
+    transform: rotate(0deg);
     transition: transform 0.4s;
-    vertical-align:0;
+    vertical-align: 0;
     display: inline-block;
   }
-  .manage_menu_collapse{
-    transform:rotate(90deg);
+  .manage_menu_collapse {
+    transform: rotate(90deg);
   }
-  .manage_breadcrumb{
+  .manage_breadcrumb {
     display: inline-block;
     line-height: $navbar_height;
+  }
+  .manage_dropdown {
+    float: right;
+    padding: 0 50px;
+    vertical-align: top;
+    line-height: 100%;
+    height: 100%;
+    .manage_userHead {
+      padding: 12.5px 3px;
+      height: 25px;
+      border-radius: 50%;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .manage_userName{
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      height: 100%;
+      line-height: 50px;
+    }
   }
 }

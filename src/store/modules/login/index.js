@@ -1,4 +1,5 @@
 import api from '@/server'
+// import router from '@/router'
 const user = {
   state: {
     token: null,
@@ -38,6 +39,7 @@ const user = {
       commit('SET_USERINFO', userInfo)
     },
     loginOut ({commit}) {
+      localStorage.removeItem('token')
       commit('SET_TOKEN', '')
       commit('CHANGE_LOGIN_STATUS', false)
     }
