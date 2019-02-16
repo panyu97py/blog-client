@@ -27,6 +27,18 @@ export default [
         }
       },
       {
+        path: 'personalCenter',
+        name: 'personalCenter',
+        rootModule: 'manage',
+        component: () => import('@/views/manage/personalCenter'),
+        meta: {
+          title: '个人中心',
+          icon: 'personal',
+          requireLogin: true,
+          authorizedRoles: []
+        }
+      },
+      {
         path: 'articles',
         rootModule: 'manage',
         name: 'articles',
