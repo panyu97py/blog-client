@@ -7,14 +7,14 @@
           :index="manageModule.path"
           :key="manageModule.name"
         >
-          <template slot="title" v-if="item.meta">
+          <template slot="title" v-if="manageModule.meta">
             <svg-icon :icon-class="manageModule.meta.icon" v-if="manageModule.meta.icon" class="sidebar_icon"/>
             <span slot="title">{{manageModule.meta.title}}</span>
           </template>
           <SlidebarItem :item="manageModule" :key="manageModule.name"/>
         </el-submenu>
         <el-menu-item
-          v-else-if="item.meta"
+          v-else-if="manageModule.meta&&!manageModule.hidden"
           :index="manageModule.path"
           :key="manageModule.name"
           :route="{name:manageModule.name}"

@@ -18,6 +18,7 @@ export default [
         path: 'overview',
         name: 'manage_overview',
         rootModule: 'manage',
+        hidden: false,
         component: () => import('@/views/manage/overview'),
         meta: {
           title: '概览',
@@ -30,6 +31,7 @@ export default [
         path: 'personalCenter',
         name: 'personalCenter',
         rootModule: 'manage',
+        hidden: false,
         component: () => import('@/views/manage/personalCenter'),
         meta: {
           title: '个人中心',
@@ -42,6 +44,7 @@ export default [
         path: 'userManage',
         name: 'userManage',
         rootModule: 'manage',
+        hidden: false,
         component: () => import('@/views/manage/userManage'),
         meta: {
           title: '用户管理',
@@ -54,6 +57,7 @@ export default [
         path: 'labelManage',
         name: 'labelManage',
         rootModule: 'manage',
+        hidden: false,
         component: () => import('@/views/manage/labelManage'),
         meta: {
           title: '标签管理',
@@ -68,6 +72,7 @@ export default [
         name: 'articles',
         redirect: '/manage/articles/preview',
         component: routerView,
+        hidden: false,
         meta: {
           title: '博文管理',
           icon: 'article',
@@ -79,6 +84,7 @@ export default [
             path: 'create',
             rootModule: 'manage',
             name: 'createArticles',
+            hidden: false,
             component: () =>
               import('@/views/manage/articleManage/createArticles'),
             meta: {
@@ -92,6 +98,7 @@ export default [
             path: 'edit',
             rootModule: 'manage',
             name: 'editArticles',
+            hidden: true,
             component: () =>
               import('@/views/manage/articleManage/editArticle'),
             meta: {
@@ -105,6 +112,7 @@ export default [
             path: 'preview',
             rootModule: 'manage',
             name: 'previewArticles',
+            hidden: false,
             component: () =>
               import('@/views/manage/articleManage/previewArticles'),
             meta: {
