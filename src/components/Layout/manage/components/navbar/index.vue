@@ -57,11 +57,7 @@ export default {
       this.$router.push({ name: 'login' })
     },
     personalCenter () {
-      this.$notify({
-        title: '警告',
-        message: '个人中心还在开发中',
-        type: 'warning'
-      })
+      this.$router.push({ name: 'personalCenter' })
     }
   },
   computed: {
