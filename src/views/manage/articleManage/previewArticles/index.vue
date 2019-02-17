@@ -1,6 +1,6 @@
 <template>
   <div id="previewArticles">
-    <articleTable :data="articleListByPage.data"/>
+    <articleTable :data="articleListByPage.data" @edit="edit" @view="view"/>
     <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
   </div>
 </template>
@@ -40,6 +40,12 @@ export default {
       if (this.articleList.length === 0) {
         await this.getArticleList()
       }
+    },
+    edit (row) {
+      this.$router.push({name: 'editArticles', query: {article_id: row.article_id}})
+    },
+    view (row) {
+      console.log(row)
     }
   },
   mounted () {

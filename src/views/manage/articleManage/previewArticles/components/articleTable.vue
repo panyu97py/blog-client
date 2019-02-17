@@ -14,8 +14,8 @@
     </el-table-column>
     <el-table-column label="操作" align="center">
       <template slot-scope="scope">
-        <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-        <el-button type="text" size="small">编辑</el-button>
+        <el-button @click="view(scope.row)" type="text" size="small">查看</el-button>
+        <el-button type="text" size="small"  @click="edit(scope.row)">编辑</el-button>
       </template>
     </el-table-column>
   </articleTable>
@@ -28,8 +28,11 @@ export default {
     articleTable
   },
   methods: {
-    handleClick (row) {
-      console.log(row)
+    view (row) {
+      this.$emit('view', row)
+    },
+    edit (row) {
+      this.$emit('edit', row)
     },
     getTime (date) {
       let { year, month, day, hour, minutes } = this.$utils.timeConversion(

@@ -66,7 +66,7 @@ export default [
         path: 'articles',
         rootModule: 'manage',
         name: 'articles',
-        redirect: '/manage/articles/create',
+        redirect: '/manage/articles/preview',
         component: routerView,
         meta: {
           title: '博文管理',
@@ -87,7 +87,21 @@ export default [
               requireLogin: true,
               authorizedRoles: []
             }
-          }, {
+          },
+          {
+            path: 'edit',
+            rootModule: 'manage',
+            name: 'editArticles',
+            component: () =>
+              import('@/views/manage/articleManage/editArticle'),
+            meta: {
+              title: '编辑文章',
+              icon: 'edit',
+              requireLogin: true,
+              authorizedRoles: []
+            }
+          },
+          {
             path: 'preview',
             rootModule: 'manage',
             name: 'previewArticles',
