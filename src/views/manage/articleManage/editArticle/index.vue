@@ -27,6 +27,7 @@ export default {
   methods: {
     async saveArticles () {
       await this.$api.editArticle(this.articleId, this.article.article_title, this.article.article_content)
+      this.$router.push({name: 'previewArticles'})
       this.$notify({
         title: '成功',
         message: '保存成功',
