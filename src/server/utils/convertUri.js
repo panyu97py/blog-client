@@ -5,7 +5,6 @@ if (process.env.ENV === 'prod') {
 } else {
   api = require('../config/api.dev').default
 }
-api = require('../config/api.prod').default
 /**
  * uri转url
  */
