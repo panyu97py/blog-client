@@ -10,7 +10,8 @@ export default (date) => {
     let day = addZero(date.getDate())
     let hour = addZero(date.getHours())
     let minutes = addZero(date.getMinutes())
-    return {year, month, day, hour, minutes}
+    let second = addZero(date.getSeconds())
+    return {year, month, day, hour, minutes, second}
   } else {
     return date
   }
