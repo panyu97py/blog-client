@@ -10,7 +10,7 @@
 
 <script>
 import Tinymce from '@/components/Tinymce'
-// import {mapGetters} from 'vuex'
+import {mapActions} from 'vuex'
 export default {
   components: { Tinymce },
   data () {
@@ -23,6 +23,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(['getArticleList']),
     async saveArticles () {
       let {articleTitle, articleContent} = this.form
       await this.$api.addArticle(articleTitle, articleContent)
@@ -31,6 +32,8 @@ export default {
         message: '保存成功',
         type: 'success'
       })
+      await this.getArticleList()
+      this.$router.push({name: 'previewArticles'})
     }
   }
 }

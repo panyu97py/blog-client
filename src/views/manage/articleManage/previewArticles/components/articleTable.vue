@@ -14,8 +14,13 @@
     </el-table-column>
     <el-table-column label="操作" align="center">
       <template slot-scope="scope">
-        <el-button @click="view(scope.row)" type="text" size="small">查看</el-button>
-        <el-button type="text" size="small"  @click="edit(scope.row)">编辑</el-button>
+        <el-button type="text" size="small" @click="edit(scope.row)">编辑</el-button>
+        <deleteButton
+          type="text"
+          size="small"
+          :tips="tips(scope.row.article_title)"
+          @click="Delete(scope.row)"
+        />
       </template>
     </el-table-column>
   </articleTable>
@@ -23,16 +28,26 @@
 
 <script>
 import articleTable from '@/components/table'
+import deleteButton from './deleteButton'
 export default {
   components: {
-    articleTable
+    articleTable,
+    deleteButton
+  },
+  data () {
+    return {
+      visible: false
+    }
   },
   methods: {
-    view (row) {
-      this.$emit('view', row)
+    Delete (row) {
+      this.$emit('delete', row)
     },
     edit (row) {
       this.$emit('edit', row)
+    },
+    tips (title) {
+      return `您将永久删除标题为${title}的文章`
     },
     getTime (date) {
       let { year, month, day, hour, minutes } = this.$utils.timeConversion(

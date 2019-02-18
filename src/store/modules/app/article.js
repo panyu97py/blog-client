@@ -16,12 +16,13 @@ const article = {
     async getArticleList ({commit}) {
       let res = await api.getArticle({})
       res.map(item => {
-        item.article_date = new Date(item.article_date).getTime()
+        item.time = new Date(item.article_date).getTime()
       })
       console.log(res)
-      res = utils.bubbleSort(res, 'article_date', 'reverse')
+      res = utils.bubbleSort(res, 'time', 'reverse')
       res.map((item, index) => {
         item.article_serial_number = index + 1
+        delete item.time
       })
       commit('SET_ARTICLELIST', res)
       return res

@@ -1,6 +1,6 @@
 <template>
   <div id="previewArticles">
-    <articleTable :data="articleListByPage.data" @edit="edit" @view="view"/>
+    <articleTable :data="articleListByPage.data" @edit="edit" @delete="Delete"/>
     <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
   </div>
 </template>
@@ -25,15 +25,6 @@ export default {
       currentPage: 1
     }
   },
-  // asyncComputed: {
-  //   async tableData () {
-  //     let data =
-  //       this.articleList.length === 0
-  //         ? await this.getArticleList()
-  //         : this.articleList
-  //     return data
-  //   }
-  // },
   methods: {
     ...mapActions(['getArticleList']),
     async getTableData () {
@@ -44,8 +35,14 @@ export default {
     edit (row) {
       this.$router.push({name: 'editArticles', query: {article_id: row.article_id}})
     },
-    view (row) {
-      console.log(row)
+    async Delete (row) {
+      await this.$api.deleteArticle(row.article_id)
+      this.$notify({
+        title: '成功',
+        message: '删除成功',
+        type: 'success'
+      })
+      await this.getArticleList()
     }
   },
   mounted () {

@@ -9,6 +9,7 @@
   @import './Navigation-sidebar.scss';
   @import './Navigation_navbar.scss';
   @import './Manage-main.scss';
+  @include No-Scrollbar;
   .manage_layout_main_collapse,.manage_layout_main{
     height: 100%;
     -webkit-transition: margin-left  $transition_time;
