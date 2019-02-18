@@ -7,7 +7,7 @@
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: absolute;
+  position: fixed;//放置ios safair 浏览器上下滑动白边s
   top: 0;
   left: 0;
   right: 0;
