@@ -1,7 +1,8 @@
 <template>
   <div id="previewArticles">
-    <articleTable :data="articleListByPage.data" @edit="edit" @delete="Delete"/>
-    <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
+    <articleTable :data="articleListByPage.data" @edit="edit" @delete="Delete" @add="add">
+      <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
+    </articleTable>
   </div>
 </template>
 <script>
@@ -32,8 +33,16 @@ export default {
         await this.getArticleList()
       }
     },
+    add () {
+      this.$router.push({
+        name: 'createArticles'
+      })
+    },
     edit (row) {
-      this.$router.push({name: 'editArticles', query: {article_id: row.article_id}})
+      this.$router.push({
+        name: 'editArticles',
+        query: { article_id: row.article_id }
+      })
     },
     async Delete (row) {
       await this.$api.deleteArticle(row.article_id)

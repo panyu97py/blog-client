@@ -1,29 +1,32 @@
 <template>
-  <articleTable :data="data">
-    <el-table-column prop="article_serial_number" label="#" align="center" width="80"></el-table-column>
-    <el-table-column prop="article_title" label="标题" align="center"></el-table-column>
-    <el-table-column label="作者" align="center">
-      <template slot-scope="scope">
-        <span>{{scope.row.article_author_info.user_nickname||scope.row.article_author_info.user_name}}</span>
-      </template>
-    </el-table-column>
-    <el-table-column label="创建时间" align="center">
-      <template slot-scope="scope">
-        <span>{{getTime(scope.row.article_date)}}</span>
-      </template>
-    </el-table-column>
-    <el-table-column label="操作" align="center">
-      <template slot-scope="scope">
-        <el-button type="text" size="small" @click="edit(scope.row)">编辑</el-button>
-        <deleteButton
-          type="text"
-          size="small"
-          :tips="tips(scope.row.article_title)"
-          @click="Delete(scope.row)"
-        />
-      </template>
-    </el-table-column>
-  </articleTable>
+  <div>
+    <articleTable :data="data" addText="添加文章" @add="$emit('add')">
+      <el-table-column prop="article_serial_number" label="#" align="center" width="80"></el-table-column>
+      <el-table-column prop="article_title" label="标题" align="center"></el-table-column>
+      <el-table-column label="作者" align="center">
+        <template slot-scope="scope">
+          <span>{{scope.row.article_author_info.user_nickname||scope.row.article_author_info.user_name}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="创建时间" align="center">
+        <template slot-scope="scope">
+          <span>{{getTime(scope.row.article_date)}}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="操作" align="center">
+        <template slot-scope="scope">
+          <el-button type="text" size="small" @click="edit(scope.row)">编辑</el-button>
+          <deleteButton
+            type="text"
+            size="small"
+            :tips="tips(scope.row.article_title)"
+            @click="Delete(scope.row)"
+          />
+        </template>
+      </el-table-column>
+      <slot slot="pagination"/>
+    </articleTable>
+  </div>
 </template>
 
 <script>

@@ -1,0 +1,27 @@
+#addButton {
+  cursor: default;
+  padding: 5px;
+  $icon_size:20px;
+  margin-bottom: 10px;
+  text-align: right;  
+  .addIcon {
+    vertical-align: top;
+    display: inline-block;
+    width: $icon_size;
+    height:$icon_size;
+    background: $yellow;
+    color:white;
+    font-weight: bolder;
+    font-size: $icon_size;
+    text-align: center;
+    line-height: $icon_size;
+  }
+  .addText{
+    vertical-align: top;
+    display: inline-block;
+    height:$icon_size;
+    line-height: $icon_size;
+    color:$black;
+    font-size: 15px;
+  }
+}

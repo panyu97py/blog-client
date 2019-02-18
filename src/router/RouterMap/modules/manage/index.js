@@ -84,7 +84,7 @@ export default [
             path: 'create',
             rootModule: 'manage',
             name: 'createArticles',
-            hidden: false,
+            hidden: true,
             component: () =>
               import('@/views/manage/articleManage/createArticles'),
             meta: {
