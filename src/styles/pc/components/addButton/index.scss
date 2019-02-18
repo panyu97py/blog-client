@@ -3,26 +3,28 @@
   $icon_size:20px;
   margin-bottom: 10px;
   text-align: right;  
-  .addIcon {
-    cursor: pointer;
-    vertical-align: top;
+  .addButtonItem{
     display: inline-block;
-    width: $icon_size;
-    height:$icon_size;
-    background: $yellow;
-    color:white;
-    font-weight: bolder;
-    font-size: $icon_size;
-    text-align: center;
-    line-height: $icon_size;
-  }
-  .addText{
     cursor: pointer;
-    vertical-align: top;
-    display: inline-block;
-    height:$icon_size;
-    line-height: $icon_size;
-    color:$black;
-    font-size: 15px;
+    .addIcon {
+      vertical-align: top;
+      display: inline-block;
+      width: $icon_size;
+      height:$icon_size;
+      background: $yellow;
+      color:white;
+      font-weight: bolder;
+      font-size: $icon_size;
+      text-align: center;
+      line-height: $icon_size;
+    }
+    .addText{
+      vertical-align: top;
+      display: inline-block;
+      height:$icon_size;
+      line-height: $icon_size;
+      color:$black;
+      font-size: 15px;
+    }
   }
 }

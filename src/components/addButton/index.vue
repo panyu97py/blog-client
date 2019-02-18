@@ -1,7 +1,9 @@
 <template>
   <div id="addButton">
-    <span class="addIcon" @click="$emit('click')">+</span>
-    <span class="addText" @click="$emit('click')">{{text}}</span>
+    <div class="addButtonItem" @click="$emit('click')">
+      <span class="addIcon">+</span>
+      <span class="addText">{{text}}</span>
+    </div>
   </div>
 </template>
 <script>
