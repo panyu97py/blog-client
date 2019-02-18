@@ -19,10 +19,10 @@ const article = {
         item.article_date = new Date(item.article_date).getTime()
       })
       console.log(res)
-      for (let key in res) {
-        console.log(key, res[key]['article_date'], new Date(res[key]['article_date']))
-      }
       res = utils.bubbleSort(res, 'article_date', 'reverse')
+      res.map((item, index) => {
+        item.article_serial_number = index + 1
+      })
       commit('SET_ARTICLELIST', res)
       return res
     }
