@@ -1,10 +1,10 @@
 #addButton {
-  cursor: default;
   padding: 5px;
   $icon_size:20px;
   margin-bottom: 10px;
   text-align: right;  
   .addIcon {
+    cursor: pointer;
     vertical-align: top;
     display: inline-block;
     width: $icon_size;
@@ -17,6 +17,7 @@
     line-height: $icon_size;
   }
   .addText{
+    cursor: pointer;
     vertical-align: top;
     display: inline-block;
     height:$icon_size;
