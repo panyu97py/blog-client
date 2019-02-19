@@ -31,7 +31,7 @@
 
 <script>
 import articleTable from '@/components/table'
-import deleteButton from './deleteButton'
+import deleteButton from '@/components/button/deleteButton'
 export default {
   components: {
     articleTable,
