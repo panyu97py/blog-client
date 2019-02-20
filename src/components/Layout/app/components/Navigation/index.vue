@@ -43,9 +43,6 @@ export default {
     },
     login () {
       this.$router.push({name: 'login'})
-    },
-    mouseover () {
-      console.log('mouseover')
     }
   },
   components: {

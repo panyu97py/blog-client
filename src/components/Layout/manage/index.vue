@@ -22,14 +22,14 @@ export default {
     manageMain,
     navbar,
     sidebar
-  },
-  watch: {
-    isCollapse: {
-      deep: true,
-      handler (isCollapse) {
-        console.log(isCollapse)
-      }
-    }
   }
+  // watch: {
+  //   isCollapse: {
+  //     deep: true,
+  //     handler (isCollapse) {
+  //       console.log(isCollapse)
+  //     }
+  //   }
+  // }
 }
 </script>
