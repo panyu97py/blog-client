@@ -1,10 +1,19 @@
 <template>
   <div id="personalCenter">
-    <div class="headImg">
-      <img src="/static/icon.JPG" alt class="headImg">
-    </div>
+    <cardView>
+      <div class="headImg">
+        <img src="/static/icon.JPG" alt class="headImg">
+      </div>
+    </cardView>
   </div>
 </template>
+<script>
+import cardView from '@/components/cardView'
+export default {
+  components: { cardView }
+}
+</script>
+
 <style lang="scss" scoped>
 #personalCenter {
   .headImg {
