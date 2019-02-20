@@ -1,13 +1,22 @@
 <template>
   <div id="articleSketch">
-    <ArticleSketch v-for="article in articleListByPage.data" :key="article.article_id" :article="article"/>
-    <Pagination v-model="currentPage" :totalPage="articleListByPage.totalPage"/>
+    <template v-if="articleList.length>0">
+      <ArticleSketch
+        v-for="article in articleListByPage.data"
+        :key="article.article_id"
+        :article="article"
+      />
+      <Pagination v-model="currentPage" :totalPage="articleListByPage.totalPage"/>
+    </template>
+        <template v-else>
+      <noArticle/>
+    </template>
   </div>
 </template>
 <script>
 import ArticleSketch from '@/components/article/sketch'
 import Pagination from '@/components/Pagination/app'
-
+import noArticle from '@/components/article/none'
 export default {
   name: 'articleSketch',
   data () {
@@ -18,6 +27,7 @@ export default {
   },
   components: {
     ArticleSketch,
+    noArticle,
     Pagination
   },
   computed: {
