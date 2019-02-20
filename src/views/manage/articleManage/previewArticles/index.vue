@@ -1,18 +1,22 @@
 <template>
   <div id="previewArticles">
-    <articleTable :data="articleListByPage.data" @edit="edit" @delete="Delete" @add="add">
-      <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
-    </articleTable>
+    <cardView>
+      <articleTable :data="articleListByPage.data" @edit="edit" @delete="Delete" @add="add">
+        <Pagination :totalPage="articleListByPage.totalPage" v-model="currentPage"/>
+      </articleTable>
+    </cardView>
   </div>
 </template>
 <script>
+import cardView from '@/components/cardView'
 import { mapGetters, mapActions } from 'vuex'
 import articleTable from './components/articleTable'
 import Pagination from '@/components/Pagination/manage'
 export default {
   components: {
     articleTable,
-    Pagination
+    Pagination,
+    cardView
   },
   computed: {
     ...mapGetters(['articleList']),
