@@ -12,6 +12,8 @@
   @import "./variable.scss";
   @import './mixin.scss';
   @import './transition.scss';
+
+  //components css
   @import "./components/article/index.scss";
   @import "./components/layout/index.scss";
   @import "./components/labelList/index.scss";
@@ -22,7 +24,7 @@
   @import './components/button/addButton/index.scss';
   @import './components/cardView/index.scss';
   
-  
+  //view css
   @import "./view/app/articleDetails/index.scss";
   @import "./view/app/articleSketch/index.scss";
   @import "./view/app/overview/index.scss";
