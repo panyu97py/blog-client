@@ -1,6 +1,22 @@
-# <center> [blog-client](http://blog.luyu.fun) </center>
-
-## <center> [![Build Status](https://www.travis-ci.org/panyu97py/blog-client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog-client) [![](https://img.shields.io/badge/vue-2.9.6-brightgreen.svg)](https://github.com/vuejs/vue) [![](https://img.shields.io/badge/element--ui-2.4.11-brightgreen.svg)](https://github.com/ElemeFE/element) [![](https://img.shields.io/badge/prismjs-1.15.0-brightgreen.svg)](https://prismjs.com/) </center>
+<p align="center">
+  <a>
+    <img width="320" src="https://raw.githubusercontent.com/panyu97py/github-static/master/img/blog-client.png">
+  </a>
+</p>
+<p align="center">
+  <a href="https://github.com/vuejs/vue">
+    <img src="https://img.shields.io/badge/vue-2.9.6-brightgreen.svg" alt="donate">
+  </a>
+  <a href="https://github.com/ElemeFE/element">
+    <img src="https://img.shields.io/badge/element--ui-2.4.11-brightgreen.svg" alt="donate">
+  </a>
+  <a href="https://prismjs.com">
+    <img src="https://img.shields.io/badge/prismjs-1.15.0-brightgreen.svg" alt="donate">
+  </a>
+  <a href="https://www.travis-ci.org/panyu97py/blog-client">
+    <img src="https://www.travis-ci.org/panyu97py/blog-client.svg?branch=master" alt="donate">
+  </a>
+</p>
 
 ## Build Setup
 
