@@ -1,10 +1,10 @@
-# [blog-client](http://blog.luyu.fun)
-> [我的博客客户端](http://blog.luyu.fun) 欢迎 issues 交流
-## [![Build Status](https://www.travis-ci.org/panyu97py/blog-client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog-client)
+# <center> [blog-client](http://blog.luyu.fun) </center>
+
+## <center> [![Build Status](https://www.travis-ci.org/panyu97py/blog-client.svg?branch=master)](https://www.travis-ci.org/panyu97py/blog-client) [![](https://img.shields.io/badge/vue-2.9.6-brightgreen.svg)](https://github.com/vuejs/vue) [![](https://img.shields.io/badge/element--ui-2.4.11-brightgreen.svg)](https://github.com/ElemeFE/element) [![](https://img.shields.io/badge/prismjs-1.15.0-brightgreen.svg)](https://prismjs.com/) </center>
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
@@ -35,3 +35,5 @@ npm test
 ### 后台界面
 
 ![image](https://raw.githubusercontent.com/panyu97py/github-static/master/img/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png)
+
+### [我的博客客户端](http://blog.luyu.fun) 欢迎 issues 交流
