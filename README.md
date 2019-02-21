@@ -1,5 +1,5 @@
 <p align="center">
-  <a>
+  <a href="http://blog.luyu.fun">
     <img width="320" src="https://raw.githubusercontent.com/panyu97py/github-static/master/img/blog-client.png">
   </a>
 </p>
