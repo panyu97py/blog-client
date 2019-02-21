@@ -1,12 +1,8 @@
-#table{
-  margin: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: white;
-  .tableHead{
-    background: $light_gray ;
+#table {
+  .tableHead {
+    background: $light_gray;
   }
-  .table{
+  .table {
     margin-bottom: 10px;
   }
 }

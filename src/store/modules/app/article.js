@@ -18,7 +18,6 @@ const article = {
       res.map(item => {
         item.time = new Date(item.article_date).getTime()
       })
-      console.log(res)
       res = utils.bubbleSort(res, 'time', 'reverse')
       res.map((item, index) => {
         item.article_serial_number = index + 1

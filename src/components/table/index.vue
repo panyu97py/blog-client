@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import addButton from '@/components/addButton'
+import addButton from '@/components/button/addButton'
 export default {
   props: {
     data: {

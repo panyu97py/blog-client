@@ -43,9 +43,6 @@ export default {
     router () {
       return this.$router.options.routes
     }
-  },
-  mounted () {
-    console.log(this.router)
   }
 }
 </script>
