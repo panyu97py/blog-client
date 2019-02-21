@@ -34,4 +34,4 @@ npm test
 
 ### 后台界面
 
-![image](https://raw.githubusercontent.com/panyu97py/github-static/master/img/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%90%8E%E5%8F%B0%E7%95%8C%E9%9D%A2.png)
+![image](https://raw.githubusercontent.com/panyu97py/github-static/master/img/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2.png)
