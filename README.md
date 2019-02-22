@@ -29,6 +29,8 @@ npm run dev
 
 # build for production with minification
 npm run build:prod
+
+# build for development with minification
 npm run build:dev
 
 # build for production and view the bundle analyzer report
